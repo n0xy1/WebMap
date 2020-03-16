@@ -1,0 +1,405 @@
+<html><head>
+    <meta charset="utf-8">
+    <title>RSR - Live Map</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+
+    <link rel="icon" href="//img1.wsimg.com/isteam/ip/d837f339-0c70-45ad-8c5c-4614e8fe41cf/favicon/a71a660b-037f-45e6-b5bc-8bbbb4f12562.png/:/rs=w:64,h:64,m" sizes="64x64">
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css" rel="stylesheet">
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+        #map canvas {cursor: crosshair;}
+
+        .mapboxgl-popup {
+        max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        }
+        .mapboxgl-popup-content {
+        color: #2f2f2f;
+        }
+        #controlbox { position: absolute; top: 10px; left: 10px; z-index: 99; border-radius:27px; -moz-border-radius:27px; -webkit-border-radius:27px;}
+
+    </style>
+</head>
+<body>
+<canvas id="canvasID" width="400" height="400"><img src="logo.png"></canvas>
+<div id="map" class="mapboxgl-map"><div class="mapboxgl-canary" style="visibility: hidden;"></div><div class="mapboxgl-canvas-container mapboxgl-interactive mapboxgl-touch-drag-pan mapboxgl-touch-zoom-rotate"><canvas class="mapboxgl-canvas" tabindex="0" aria-label="Map" width="635" height="888" style="position: absolute; width: 635px; height: 888px;"></canvas></div><div class="mapboxgl-control-container"><div class="mapboxgl-ctrl-top-left"></div><div class="mapboxgl-ctrl-top-right"></div><div class="mapboxgl-ctrl-bottom-left"><div class="mapboxgl-ctrl" style="display: block;"><a class="mapboxgl-ctrl-logo" target="_blank" rel="noopener nofollow" href="https://www.mapbox.com/" aria-label="Mapbox logo"></a></div></div><div class="mapboxgl-ctrl-bottom-right"><div class="mapboxgl-ctrl mapboxgl-ctrl-attrib mapboxgl-compact"><div class="mapboxgl-ctrl-attrib-inner"><a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox</a> <a href="http://www.openstreetmap.org/about/" target="_blank">© OpenStreetMap</a> <a class="mapbox-improve-map" href="https://apps.mapbox.com/feedback/?owner=mapbox&amp;id=dark-v10&amp;access_token=pk.eyJ1IjoiZW5naW5lMDc1NSIsImEiOiJjazMyY2NiNnkwaWpjM21wbXplcmk5azh5In0.XoHRgaAQgpCbLaqcBru51g" target="_blank" rel="noopener nofollow">Improve this map</a></div></div></div></div></div>
+<script>
+    //    function dev_in_progress() {
+    //        var ask = window.confirm("Developer is currently workin on this, want to take a look?");
+    //        if (ask) {
+    //
+    //            window.location.href = "https://www.twitch.tv/mike_for_sale/";
+    //
+    //        }
+    //    }
+    //    dev_in_progress();
+</script>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZW5naW5lMDc1NSIsImEiOiJjazMyY2NiNnkwaWpjM21wbXplcmk5azh5In0.XoHRgaAQgpCbLaqcBru51g';
+    //mapboxgl.accessToken = 'pk.eyJ1IjoibjB4eSIsImEiOiJjazdyOWFwa2swMmdyM2tucW8xeXJrZWhpIn0.Tg-DWkix155wQwzwB-XiAw';
+    var bounds = [
+        [35.580307, 39.103504], // Southwest coordinates
+        [48.030353, 46.359388]  // Northeast coordinates
+    ];
+
+
+    var map = new mapboxgl.Map({
+        container: 'map',
+        //style: 'mapbox://styles/n0xy/ck7ra0wkk12h81ipomqstpkvu',
+        style: 'mapbox://styles/mapbox/dark-v10',
+
+        center: [40.392174,43.503044],
+        zoom: 6.8,
+
+        //maxBounds: bounds, // Sets bounds as max
+
+
+    });
+
+    var size = 200;
+
+    // implementation of CustomLayerInterface to draw a pulsing dot icon on the map
+    // see https://docs.mapbox.com/mapbox-gl-js/api/#customlayerinterface for more info
+    var pulsingDot = {
+        width: size,
+        height: size,
+        data: new Uint8Array(size * size * 4),
+
+        // get rendering context for the map canvas when layer is added to the map
+        onAdd: function() {
+            var canvas = document.createElement('canvas');
+            canvas.width = this.width;
+            canvas.height = this.height;
+            this.context = canvas.getContext('2d');
+        },
+
+        // called once before every frame where the icon will be used
+        render: function() {
+            var duration = 1000;
+            var t = (performance.now() % duration) / duration;
+
+            var radius = size / 4 * 0.3;
+            var outerRadius = size / 4 * 0.7 * t + radius;
+            var context = this.context;
+
+            // draw outer circle
+            context.clearRect(0, 0, this.width, this.height);
+            context.beginPath();
+            context.arc(this.width / 2, this.height / 2, outerRadius, 0, Math.PI * 2);
+            context.fillStyle = 'rgba(255, 200, 200,' + (1 - t) + ')';
+            context.fill();
+
+            // draw inner circle
+            context.beginPath();
+            context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
+            context.fillStyle = 'rgba(255, 100, 100, 1)';
+            context.strokeStyle = 'white';
+            context.lineWidth = 2 + 4 * (1 - t);
+            context.fill();
+            context.stroke();
+
+            // update this image's data with data from the canvas
+            this.data = context.getImageData(0, 0, this.width, this.height).data;
+
+            // continuously repaint the map, resulting in the smooth animation of the dot
+            map.triggerRepaint();
+
+            // return `true` to let the map know that the image was updated
+            return true;
+        }
+    };
+
+    var pulsingDot1 = {
+        width: size,
+        height: size,
+        data: new Uint8Array(size * size * 4),
+
+        // get rendering context for the map canvas when layer is added to the map
+        onAdd: function() {
+            var canvas = document.createElement('canvas');
+            canvas.width = this.width;
+            canvas.height = this.height;
+            this.context = canvas.getContext('2d');
+        },
+
+        // called once before every frame where the icon will be used
+        render: function() {
+            var duration = 1000;
+            var t = (performance.now() % duration) / duration;
+
+            var radius = size / 4 * 0.3;
+            var outerRadius = size / 4 * 0.7 * t + radius;
+            var context = this.context;
+
+            // draw outer circle
+            context.clearRect(0, 0, this.width, this.height);
+            context.beginPath();
+            context.arc(this.width / 2, this.height / 2, outerRadius, 0, Math.PI * 2);
+            context.fillStyle = 'rgba(65, 105, 225,' + (1 - t) + ')';
+            context.fill();
+
+            // draw inner circle
+            context.beginPath();
+            context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
+            context.fillStyle = 'rgba(65, 105, 225, 1)';
+            context.strokeStyle = 'white';
+            context.lineWidth = 2 + 4 * (1 - t);
+            context.fill();
+            context.stroke();
+
+            // update this image's data with data from the canvas
+            this.data = context.getImageData(0, 0, this.width, this.height).data;
+
+            // continuously repaint the map, resulting in the smooth animation of the dot
+            map.triggerRepaint();
+
+            // return `true` to let the map know that the image was updated
+            return true;
+        }
+    };
+
+    var pulsingDot2 = {
+        width: size,
+        height: size,
+        data: new Uint8Array(size * size * 4),
+
+        // get rendering context for the map canvas when layer is added to the map
+        onAdd: function() {
+            var canvas = document.createElement('canvas');
+            canvas.width = this.width;
+            canvas.height = this.height;
+            this.context = canvas.getContext('2d');
+        },
+
+        // called once before every frame where the icon will be used
+        render: function() {
+            var duration = 1000;
+            var t = (performance.now() % duration) / duration;
+
+            var radius = size / 4 * 0.3;
+            var outerRadius = size / 4 * 0.7 * t + radius;
+            var context = this.context;
+
+            // draw outer circle
+            context.clearRect(0, 0, this.width, this.height);
+            context.beginPath();
+            context.arc(this.width / 2, this.height / 2, outerRadius, 0, Math.PI * 2);
+            context.fillStyle = 'rgba(200, 255, 200,' + (1 - t) + ')';
+            context.fill();
+
+            // draw inner circle
+            context.beginPath();
+            context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
+            context.fillStyle = 'rgba(100, 255, 100, 1)';
+            context.strokeStyle = 'white';
+            context.lineWidth = 2 + 4 * (1 - t);
+            context.fill();
+            context.stroke();
+
+            // update this image's data with data from the canvas
+            this.data = context.getImageData(0, 0, this.width, this.height).data;
+
+            // continuously repaint the map, resulting in the smooth animation of the dot
+            map.triggerRepaint();
+
+            // return `true` to let the map know that the image was updated
+            return true;
+        }
+    };
+
+    var farpdot = {
+        width: size,
+        height: size,
+        data: new Uint8Array(size * size * 4),
+
+        // get rendering context for the map canvas when layer is added to the map
+        onAdd: function() {
+            var canvas = document.createElement('canvas');
+            canvas.width = this.width;
+            canvas.height = this.height;
+            this.context = canvas.getContext('2d');
+        },
+
+        // called once before every frame where the icon will be used
+        render: function() {
+            var duration = 1000;
+            var t = (performance.now() % duration) / duration;
+
+            var radius = size / 4 * 0.3;
+            var outerRadius = size / 4 * 0.7 * t + radius;
+            var context = this.context;
+
+
+            // draw inner circle
+            context.beginPath();
+            context.rect(this.width / 2, this.height / 2, 12, 12);
+            context.fillStyle = 'rgba(150, 000, 150, 1)';
+            context.strokeStyle = 'black';
+            context.lineWidth = 4;
+            context.fill();
+            context.stroke();
+
+            // update this image's data with data from the canvas
+            this.data = context.getImageData(0, 0, this.width, this.height).data;
+
+            // continuously repaint the map, resulting in the smooth animation of the dot
+            map.triggerRepaint();
+
+            // return `true` to let the map know that the image was updated
+            return true;
+        }
+    };
+   
+
+    function buildFilter(arr) {
+    var filter = ['in', 'baseName'];
+
+    if (arr.length === 0) {
+        return filter;
+    }
+    
+    for(var i = 0; i < arr.length; i += 1) {
+        filter.push(arr[i]);
+    }
+    
+    return filter;
+}
+
+
+    map.on('load', function () {
+
+        map.addImage('pulsing-dot', pulsingDot, { pixelRatio: 2 });
+        map.addImage('pulsing-dot1', pulsingDot1, { pixelRatio: 2 });
+        map.addImage('pulsing-dot2', pulsingDot2, { pixelRatio: 2 });
+        map.addImage('farpdot',farpdot,{pixelRatio: 2});
+
+        var url = "link/rsrState.json";
+        $.getJSON(url, dataReady);
+        function dataReady( data ) {
+        var blueBaseFilter = buildFilter(data.baseOwnership.Airbases.blue)
+        var redBaseFilter = buildFilter(data.baseOwnership.Airbases.red)
+        console.log(blueBaseFilter)
+        console.log(redBaseFilter)
+        var url = 'geo/geolocs.json';
+        var url2 = 'geo/farplocs.json';
+        //airbases
+        map.addSource('geolocs', { type: 'geojson', data: url });
+        map.addLayer({'id': 'blue-airbases','type': 'symbol','source': 'geolocs', "filter":blueBaseFilter,"layout":{"icon-image":"pulsing-dot1","icon-allow-overlap":true,"icon-ignore-placement":true,"text-allow-overlap":true,"text-field":["format",["upcase",["get","cap"]],{"font-scale":0.8},"\n",{},["downcase",["get","uncap"]],{"font-scale":0.6}],"text-font":["Open Sans Semibold","Arial Unicode MS Bold"],"text-offset":[0,0.6],"text-anchor":"top"}});
+        map.addLayer({'id': 'red-airbases','type': 'symbol','source': 'geolocs', "filter":redBaseFilter,"layout":{"icon-image":"pulsing-dot","icon-allow-overlap":true,"icon-ignore-placement":true,"text-allow-overlap":true,"text-field":["format",["upcase",["get","cap"]],{"font-scale":0.8},"\n",{},["downcase",["get","uncap"]],{"font-scale":0.6}],"text-font":["Open Sans Semibold","Arial Unicode MS Bold"],"text-offset":[0,0.6],"text-anchor":"top"}});
+        map.addLayer({'id': 'neutral-airbases','type': 'symbol','source': 'geolocs',"filter": ["==","side","n"] ,"layout":{"icon-image":"pulsing-dot2","icon-allow-overlap":true,"icon-ignore-placement":true,"text-allow-overlap":true,"text-field":["format",["upcase",["get","cap"]],{"font-scale":0.8},"\n",{},["downcase",["get","uncap"]],{"font-scale":0.6}],"text-font":["Open Sans Semibold","Arial Unicode MS Bold"],"text-offset":[0,0.6],"text-anchor":"top"}});
+        //farps
+        map.addSource('farplocs', { type: 'geojson', data: url2});
+        map.addLayer({'id': 'farps',type:'symbol','source':'farplocs',"layout":{"icon-image":"farpdot","icon-allow-overlap":true,"icon-ignore-placement":true,"text-allow-overlap":true,"text-field":["format",["upcase",["get","cap"]],{"font-scale":0.8},"\n",{},["downcase",["get","uncap"]],{"font-scale":0.6}],"text-font":["Open Sans Semibold","Arial Unicode MS Bold"],"text-offset":[0,0.6],"text-anchor":"top"}});
+        map.removeLayer("place-city-lg-n");
+        map.removeLayer("place-city-lg-s");
+        map.removeLayer("place-city-md-n");
+        map.removeLayer("place-city-md-s");
+        map.removeLayer("place-city-sm");
+//
+//        const metersToPixelsAtMaxZoom = (meters, latitude) => meters / 0.075 / Math.cos(latitude * Math.PI / 180)   
+//       map.addLayer({
+//        "id": "circles",
+//        "source": "geolocs",
+//        "type": "circle",
+//        "paint": {
+//            "circle-radius": {
+//                stops:[
+//                    [0,0],
+//                    [20,metersToPixelsAtMaxZoom(10000,43.651472)]],
+//                    base: 2
+//                },
+//            "circle-color": "#007cbf",
+//            "circle-opacity": 0.5,
+//            "circle-stroke-width": 2,
+//        } 
+//    });
+
+
+
+        };
+        
+
+
+        // Create a popup, but don't add it to the map yet.
+        var popup = new mapboxgl.Popup({
+        closeButton: false,
+        closeOnClick: false
+        });
+        
+        map.on('mouseenter', 'neutral-airbases', function(e) {
+        // Change the cursor style as a UI indicator.
+        map.getCanvas().style.cursor = 'pointer';
+        
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var description = e.features[0].properties.baseName;
+        
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+        
+        // Populate the popup and set its coordinates
+        // based on the feature found.
+        popup
+        .setLngLat(coordinates)
+        .setHTML(description)
+        .addTo(map);
+        });
+        
+        map.on('mouseleave', 'neutral-airbases', function() {
+        map.getCanvas().style.cursor = '';
+        popup.remove();
+        });
+
+
+
+    });
+
+
+        
+
+    
+</script>
+<div id="controlbox">
+    <nav class="uk-navbar-container uk-margin uk-navbar-transparent" uk-navbar>
+        <div class="uk-navbar-left">
+            <a href="#offcanvas-nav-primary" uk-toggle>Menu</a>
+        </div>
+    </nav>
+</div>
+ 
+<div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+        <img src="img/logo.png">
+        <ul class="uk-nav uk-nav-primary uk-margin-auto-vertical">
+            <li><a href="https://discord.gg/AptRj9p"><span class="uk-margin-small-right" uk-icon="icon: commenting"></span> Discord Link</a></li>
+            <li class="uk-nav-divider"></li>
+            <li>Server: redstormrising.ddns.net:10308</li>
+            <li>SRS: redstormrising.ddns.net:5002</li>
+            <li class="uk-nav-divider"></li>
+            <li>ATC: 250.000</li>
+            <li>GCI-Package: 125.000</li>
+            <li>AWACS Krasnodar (Wizard): 252.000</li>
+            <li>AWACS Vaziani (Darkstar): 253.000</li>
+            <li>AWACS Carrier (Overload): 231.000</li>
+            <li>EWR: 124.000</li>
+            <li class="uk-nav-divider"></li>
+            <li>Carrier Stennis1: TACAN 41X ICLS 21</li>
+            <li>Carrier Stennis2: TACAN 42X ICLS 22</li>
+            <li>Carrier Tarawa: TACAN 43X ICLS 23</li>
+        </ul>
+
+    </div>
+</div>
+
+</body></html>

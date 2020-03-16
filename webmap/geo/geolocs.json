@@ -1,0 +1,287 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "baseName": "Sochi-Adler"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            39.93910074234009,
+            43.44407831282922
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "baseName": "Vaziani"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            45.030615,
+            41.627681
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "baseName": "Sukhumi-Babushara"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            41.129701137542725,
+            42.85794086010227
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "baseName": "Gudauta",
+          "side": "n"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            40.578110218048096,
+            43.10536173866252
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "baseName": "Tbilisi-Lochini",
+          "side":"n"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            44.95180606842041,
+            41.66884061338414
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "baseName": "Soganlug",
+          "side":"n"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            44.937429428100586,
+            41.648400550454795
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "baseName": "Beslan",
+          "side":"n"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            44.6090304851532,
+            43.20487082393997
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "baseName": "Krasnodar-Pashkovsky",
+          "side":"n"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            39.18797492980957,
+            45.0345328143637
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+        "baseName": "Krasnodar-Center"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            38.94207000732422,
+            45.08273312122762
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "baseName": "Krymsk",
+          "side":"n"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.998619079589844,
+            44.96139702015699
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "baseName": "Novorossiysk",
+          "side":"n"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.781639099121094,
+            44.71502579349159
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "baseName": "Mineralnye Vody"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            43.082323,
+            44.230152
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "baseName": "Maykop-Khanskaya"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            40.035080909729,
+            44.67881537926808
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "baseName": "Mozdok"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            44.59942817687988,
+            43.787639958906524
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "baseName": "Nalchik"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            43.63773822784424,
+            43.51292276623202
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "baseName": "Gelendzhik"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            38.01312446594238,
+            44.58267338554616
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "baseName": "Anapa-Vityazevo"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.34699249267578,
+            45.002042913052655
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "baseName": "Kobuleti",
+          "side":"n"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            41.799588203430176,
+            41.84069659373597
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "baseName": "Kutaisi",
+          "side": "n"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            42.62519359588622,
+            42.24848637578158
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "baseName": "Senaki-Kolkhi"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            42.04671621322632,
+            42.24156068543091
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "baseName":"Batumi"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            41.5997314453125,
+            41.60995567056775
+          ]
+        }
+      }
+    ]
+  }

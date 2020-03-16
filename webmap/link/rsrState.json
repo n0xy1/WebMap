@@ -1,0 +1,3674 @@
+{
+  "baseOwnership": {
+    "Airbases": {
+      "blue": [ "Sochi-Adler", "Senaki-Kolkhi", "Vaziani", "Batumi", "Sukhumi-Babushara", "Gudauta" ],
+      "neutral": [ "Kutaisi", "Tbilisi-Lochini", "Soganlug", "Krasnodar-Pashkovsky", "Krymsk", "Novorossiysk", "Kobuleti" ],
+      "red": [ "Mineralnye Vody", "Maykop-Khanskaya", "Mozdok", "Nalchik", "Krasnodar-Center", "Gelendzhik", "Anapa-Vityazevo", "Beslan" ]
+    },
+    "FARPs": {
+      "blue": [ "LM56", "LM95", "MM25", "MM75", "MM69", "MN61", "LN90", "KN70", "GG19", "KN53", "GH03", "GH17", "KN76", "LN16", "BlueBeachhead", "FJ03", "LN21", "BlueStagingPoint", "EJ45", "GJ22" ],
+      "neutral": [ "RedBeachhead", "DK61", "EJ78", "FJ53" ],
+      "red": [ "MN12", "MN34", "MN19", "MP24", "LP65", "LP17", "LP31", "KP74", "GJ39", "GJ06", "FJ69", "EK20", "EK14", "DK65", "EK51", "RedStagingPoint", "EJ08" ]
+    },
+    "Ships": []
+  },
+  "ctld": {
+    "nextGroupId": 73,
+    "nextUnitId": 243
+  },
+  "persistentGroupData": [ {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_Leclerc_23 (Rambo 11)",
+    "units": [ {
+      "heading": 4.1396016889706,
+      "name": "Unpacked Leclerc #68",
+      "skill": "Excellent",
+      "type": "Leclerc",
+      "x": -149062.0625,
+      "y": 843981.5
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_T-72B_25 (Rambo 11)",
+    "units": [ {
+      "heading": 4.3740577403211,
+      "name": "Unpacked T-72B #73",
+      "skill": "Excellent",
+      "type": "T-72B",
+      "x": -149015.56250004,
+      "y": 843844.93749989
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_T-72B_25 (Rambo 11)",
+    "units": [ {
+      "heading": 4.3740577403211,
+      "name": "Unpacked T-72B #73",
+      "skill": "Excellent",
+      "type": "T-72B",
+      "x": -149015.56250004,
+      "y": 843844.93749989
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_Leclerc_23 (Rambo 11)",
+    "units": [ {
+      "heading": 4.1396016889706,
+      "name": "Unpacked Leclerc #68",
+      "skill": "Excellent",
+      "type": "Leclerc",
+      "x": -149062.0625,
+      "y": 843981.5
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_UAZ-469_24 (Rambo 11)",
+    "units": [ {
+      "heading": 2.8089549554399,
+      "name": "Unpacked UAZ-469 #71",
+      "skill": "Excellent",
+      "type": "UAZ-469",
+      "x": -153018.46875006,
+      "y": 850293.93750002
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_2S6 Tunguska_22 (Rambo 11)",
+    "units": [ {
+      "heading": 3.5814817554832,
+      "name": "Unpacked 2S6 Tunguska #64",
+      "skill": "Excellent",
+      "type": "2S6 Tunguska",
+      "x": -152570.16663901,
+      "y": 840749.00337792
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_2S6 Tunguska_21 (Rambo 11)",
+    "units": [ {
+      "heading": 3.7121546627567,
+      "name": "Unpacked 2S6 Tunguska #63",
+      "skill": "Excellent",
+      "type": "2S6 Tunguska",
+      "x": -149370.12500011,
+      "y": 847548.18749993
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Anapa-Vityazevo Red Air Defense #002",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Anapa-Vityazevo Red Air Defense #001",
+      "skill": "Excellent",
+      "type": "2S6 Tunguska",
+      "x": -4726.3535154993,
+      "y": 243480.49999999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Anapa-Vityazevo Red Heavy Armor #001",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Anapa-Vityazevo Red Heavy Armor #001",
+      "skill": "Excellent",
+      "type": "Leclerc",
+      "x": -4713.3686523438,
+      "y": 242863.390625
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Anapa-Vityazevo Red Support #001",
+    "units": [ {
+      "heading": 6.2133722364464,
+      "name": "Anapa-Vityazevo Red Support #001",
+      "skill": "Excellent",
+      "type": "Ural-375",
+      "x": -7095.7934570313,
+      "y": 244393.75
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Anapa-Vityazevo Red Air Defense #011",
+    "units": [ {
+      "heading": 6.2133722382128,
+      "name": "Anapa-Vityazevo Red Air Defense #010",
+      "skill": "Excellent",
+      "type": "Tor 9A331",
+      "x": -7643.5942381556,
+      "y": 244338.70312499
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Anapa-Vityazevo Red Air Defense #003",
+    "units": [ {
+      "heading": 6.213372233837,
+      "name": "Anapa-Vityazevo Red Air Defense #003",
+      "skill": "Excellent",
+      "type": "Strela-10M3",
+      "x": -3858.654296875,
+      "y": 245569.15625
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Anapa-Vityazevo Red Air Defense #004",
+    "units": [ {
+      "heading": 6.2133722383503,
+      "name": "Anapa-Vityazevo Red Air Defense #004",
+      "skill": "Excellent",
+      "type": "Strela-10M3",
+      "x": -6765.224609375,
+      "y": 243027.109375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Anapa-Vityazevo Red Air Defense #001",
+    "units": [ {
+      "heading": 6.2133722296693,
+      "name": "Anapa-Vityazevo Red Air Defense #002",
+      "skill": "Excellent",
+      "type": "Tor 9A331",
+      "x": -6684.4487303431,
+      "y": 244152.20312499
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Anapa-Vityazevo Red JTAC #006",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Anapa-Vityazevo Red JTAC #006",
+      "skill": "Excellent",
+      "type": "UAZ-469",
+      "x": -5132.2133788458,
+      "y": 242641.34375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Anapa-Vityazevo Red Heavy Armor #002",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Anapa-Vityazevo Red Heavy Armor #002",
+      "skill": "Excellent",
+      "type": "Leclerc",
+      "x": -5495.048828125,
+      "y": 242403.453125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Anapa-Vityazevo Red Air Defense #005",
+    "units": [ {
+      "heading": 1.8500490047319,
+      "name": "Unit #516",
+      "skill": "Excellent",
+      "type": "SA-11 Buk SR 9S18M1",
+      "x": -7163.6923828472,
+      "y": 244510.01562512
+    }, {
+      "heading": 1.8500489630671,
+      "name": "Unit #517",
+      "skill": "Excellent",
+      "type": "SA-11 Buk SR 9S18M1",
+      "x": -7017.9394531597,
+      "y": 244595.18750012
+    }, {
+      "heading": 1.8500490047319,
+      "name": "Unit #518",
+      "skill": "Excellent",
+      "type": "SA-11 Buk CC 9S470M1",
+      "x": -7110.4882812847,
+      "y": 244433.68750012
+    }, {
+      "heading": 1.8500489725047,
+      "name": "Unit #519",
+      "skill": "Excellent",
+      "type": "SA-11 Buk CC 9S470M1",
+      "x": -6984.1503906597,
+      "y": 244506.43750012
+    }, {
+      "heading": 1.8500489602504,
+      "name": "Unit #520",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -7136.1845703472,
+      "y": 244309.34375012
+    }, {
+      "heading": 1.8500488419963,
+      "name": "Unit #521",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -6998.3002930035,
+      "y": 244328.85937512
+    }, {
+      "heading": 1.8500489884853,
+      "name": "Unit #522",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -6905.2226562847,
+      "y": 244440.64062512
+    }, {
+      "heading": 1.8500489931138,
+      "name": "Unit #523",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -7258.7197265972,
+      "y": 244364.31250012
+    }, {
+      "heading": 1.8500489964908,
+      "name": "Unit #524",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -6857.963378941,
+      "y": 244549.29687512
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Gelendzhik Red JTAC #002",
+    "units": [ {
+      "heading": 6.2133722329137,
+      "name": "Gelendzhik Red JTAC #002",
+      "skill": "Excellent",
+      "type": "UAZ-469",
+      "x": -50475.43359369,
+      "y": 298714.65625
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Gelendzhik Red Air Defense #003",
+    "units": [ {
+      "heading": 4.7472953722759,
+      "name": "Unit #074",
+      "skill": "Excellent",
+      "type": "SA-11 Buk SR 9S18M1",
+      "x": -47181.066406246,
+      "y": 296764.53124987
+    }, {
+      "heading": 4.7472953807649,
+      "name": "Unit #496",
+      "skill": "Excellent",
+      "type": "SA-11 Buk SR 9S18M1",
+      "x": -47343.097656246,
+      "y": 296717.15624987
+    }, {
+      "heading": 4.7472953722759,
+      "name": "Unit #497",
+      "skill": "Excellent",
+      "type": "SA-11 Buk CC 9S470M1",
+      "x": -47230.292968746,
+      "y": 296863.03124987
+    }, {
+      "heading": 4.7472953729826,
+      "name": "Unit #498",
+      "skill": "Excellent",
+      "type": "SA-11 Buk CC 9S470M1",
+      "x": -47354.695312496,
+      "y": 296811.81249987
+    }, {
+      "heading": 4.7472953754959,
+      "name": "Unit #499",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -47159.214843746,
+      "y": 296965.90624987
+    }, {
+      "heading": 4.7472953754959,
+      "name": "Unit #500",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -47297.726562496,
+      "y": 296980.31249987
+    }, {
+      "heading": 4.7472953725433,
+      "name": "Unit #501",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -47415.078124996,
+      "y": 296894.37499987
+    }, {
+      "heading": 4.7472953794273,
+      "name": "Unit #502",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -47053.613281246,
+      "y": 296882.93749987
+    }, {
+      "heading": 4.747295372341,
+      "name": "Unit #503",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -47487.218749996,
+      "y": 296800.37499987
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Gelendzhik Red Air Defense #010",
+    "units": [ {
+      "heading": 6.2133722416388,
+      "name": "Gelendzhik Red Air Defense #010",
+      "skill": "Excellent",
+      "type": "Strela-10M3",
+      "x": -51195.984375,
+      "y": 298248.25
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Gelendzhik Red Heavy Armor",
+    "units": [ {
+      "heading": 6.2133722283402,
+      "name": "Gelendzhik Red Heavy Armor",
+      "skill": "Excellent",
+      "type": "Leclerc",
+      "x": -49550.96875,
+      "y": 298587.1875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Gelendzhik Red Support #001",
+    "units": [ {
+      "heading": 6.2133722339162,
+      "name": "Gelendzhik Red Support #001",
+      "skill": "Excellent",
+      "type": "Ural-375",
+      "x": -47298.15234375,
+      "y": 296903.5625
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Gelendzhik Red Air Defense #001",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Gelendzhik Red Air Defense #001",
+      "skill": "Excellent",
+      "type": "2S6 Tunguska",
+      "x": -50014.695312374,
+      "y": 298839.06249999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Gelendzhik Red Heavy Armor #001",
+    "units": [ {
+      "heading": 6.2133722358335,
+      "name": "Gelendzhik Red Heavy Armor #001",
+      "skill": "Excellent",
+      "type": "Leclerc",
+      "x": -50537.81640625,
+      "y": 297742.03125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Gelendzhik Red Air Defense #002",
+    "units": [ {
+      "heading": 6.2133722267314,
+      "name": "Gelendzhik Red Air Defense #002",
+      "skill": "Excellent",
+      "type": "Tor 9A331",
+      "x": -46587.152343624,
+      "y": 296513.68749999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Gelendzhik Red Air Defense #011",
+    "units": [ {
+      "heading": 6.2133722334812,
+      "name": "Gelendzhik Red Air Defense #011",
+      "skill": "Excellent",
+      "type": "Tor 9A331",
+      "x": -47875.753906124,
+      "y": 297311.37499999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Gelendzhik Red Air Defense #007",
+    "units": [ {
+      "heading": 6.2133722327646,
+      "name": "Gelendzhik Red Air Defense #007",
+      "skill": "Excellent",
+      "type": "Strela-10M3",
+      "x": -50998.4375,
+      "y": 299857.3125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Krasnodar-Center Red Heavy Armor",
+    "units": [ {
+      "heading": 6.2133722360794,
+      "name": "Krasnodar-Center Red Heavy Armor",
+      "skill": "Excellent",
+      "type": "Leclerc",
+      "x": 12395.327148438,
+      "y": 368398.84375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Krasnodar-Center Red Air Defense #012",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Krasnodar-Center Red Air Defense #011",
+      "skill": "Excellent",
+      "type": "Tor 9A331",
+      "x": 12271.872070438,
+      "y": 365524.59374999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Krasnodar-Center Red Air Defense #001",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Krasnodar-Center Red Air Defense",
+      "skill": "Excellent",
+      "type": "2S6 Tunguska",
+      "x": 11495.660156376,
+      "y": 367747.46874999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Krasnodar-Center Red JTAC #006",
+    "units": [ {
+      "heading": 6.2133722340835,
+      "name": "Krasnodar-Center Red JTAC #006",
+      "skill": "Excellent",
+      "type": "UAZ-469",
+      "x": 10190.279296935,
+      "y": 367865.875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Krasnodar-Center Red Air Defense #003",
+    "units": [ {
+      "heading": 6.2133722212145,
+      "name": "Krasnodar-Center Red Air Defense #002",
+      "skill": "Excellent",
+      "type": "Strela-10M3",
+      "x": 10288.700195313,
+      "y": 370573.5625
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Krasnodar-Center Red Air Defense #005",
+    "units": [ {
+      "heading": 4.747295380597,
+      "name": "Unit #486",
+      "skill": "Excellent",
+      "type": "SA-11 Buk SR 9S18M1",
+      "x": 12998.225585942,
+      "y": 365635.68749987
+    }, {
+      "heading": 4.7472953801597,
+      "name": "Unit #487",
+      "skill": "Excellent",
+      "type": "SA-11 Buk SR 9S18M1",
+      "x": 12836.197265629,
+      "y": 365588.31249987
+    }, {
+      "heading": 4.7472953773113,
+      "name": "Unit #488",
+      "skill": "Excellent",
+      "type": "SA-11 Buk CC 9S470M1",
+      "x": 12965.064453129,
+      "y": 365722.59374987
+    }, {
+      "heading": 4.747295380597,
+      "name": "Unit #489",
+      "skill": "Excellent",
+      "type": "SA-11 Buk CC 9S470M1",
+      "x": 12824.881835942,
+      "y": 365682.59374987
+    }, {
+      "heading": 4.7472953735883,
+      "name": "Unit #490",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": 13020.079101567,
+      "y": 365837.03124987
+    }, {
+      "heading": 4.747295380597,
+      "name": "Unit #491",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": 12871.469726567,
+      "y": 365843.62499987
+    }, {
+      "heading": 4.747295380597,
+      "name": "Unit #492",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": 12764.214843754,
+      "y": 365765.53124987
+    }, {
+      "heading": 4.7472953773113,
+      "name": "Unit #493",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": 13125.679687504,
+      "y": 365754.06249987
+    }, {
+      "heading": 4.7472953764367,
+      "name": "Unit #494",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": 12692.074218754,
+      "y": 365671.53124987
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Krasnodar-Center Red Air Defense #002",
+    "units": [ {
+      "heading": 6.2133722304133,
+      "name": "Krasnodar-Center Red Air Defense #001",
+      "skill": "Excellent",
+      "type": "Tor 9A331",
+      "x": 13243.191406376,
+      "y": 365846.46874999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Krasnodar-Center Red Support #001",
+    "units": [ {
+      "heading": 6.2133722304133,
+      "name": "Krasnodar-Center Red Light Armor #001",
+      "skill": "Excellent",
+      "type": "Ural-375",
+      "x": 12889.984375,
+      "y": 365761
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Krasnodar-Center Red Air Defense #004",
+    "units": [ {
+      "heading": 6.2133722378457,
+      "name": "Krasnodar-Center Red Air Defense #003",
+      "skill": "Excellent",
+      "type": "Strela-10M3",
+      "x": 13603.486328125,
+      "y": 368093.34375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Krasnodar-Center Red Heavy Armor #002",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Krasnodar-Center Red Heavy Armor #002",
+      "skill": "Excellent",
+      "type": "Leclerc",
+      "x": 10769.932617188,
+      "y": 368823.8125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Nalchik Red Heavy Armor  #001",
+    "units": [ {
+      "heading": 6.2133722220977,
+      "name": "Nalchik Red Heavy Armor #001",
+      "skill": "Excellent",
+      "type": "Leclerc",
+      "x": -124301.75,
+      "y": 761769.9375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Nalchik Red Air Defence #003",
+    "units": [ {
+      "heading": 6.213372229867,
+      "name": "Nalchik Red Air Defence #003",
+      "skill": "Excellent",
+      "type": "Strela-10M3",
+      "x": -124181.6484375,
+      "y": 763207.3125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Nalchik Red Air Defense #013",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #162",
+      "skill": "Excellent",
+      "type": "SA-11 Buk SR 9S18M1",
+      "x": -122724.49999987,
+      "y": 759571.25
+    }, {
+      "heading": 0,
+      "name": "Unit #163",
+      "skill": "Excellent",
+      "type": "SA-11 Buk SR 9S18M1",
+      "x": -122682.80468737,
+      "y": 759407.625
+    }, {
+      "heading": 9.0953395159939e-13,
+      "name": "Unit #164",
+      "skill": "Excellent",
+      "type": "SA-11 Buk CC 9S470M1",
+      "x": -122812.52343737,
+      "y": 759541.125
+    }, {
+      "heading": 0,
+      "name": "Unit #165",
+      "skill": "Excellent",
+      "type": "SA-11 Buk CC 9S470M1",
+      "x": -122777.42187487,
+      "y": 759399.625
+    }, {
+      "heading": 0,
+      "name": "Unit #166",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -122924.96874987,
+      "y": 759600.125
+    }, {
+      "heading": 0,
+      "name": "Unit #167",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -122944.21093737,
+      "y": 759462.1875
+    }, {
+      "heading": 0,
+      "name": "Unit #168",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -122862.42187487,
+      "y": 759341.875
+    }, {
+      "heading": 0,
+      "name": "Unit #169",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -122838.36718737,
+      "y": 759702.75
+    }, {
+      "heading": 1.4550814484124e-11,
+      "name": "Unit #170",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -122771.00781237,
+      "y": 759266.5
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Nalchik Red Support #001",
+    "units": [ {
+      "heading": 6.2133722347138,
+      "name": "Nalchik Red Light Armor #001",
+      "skill": "Excellent",
+      "type": "Ural-375",
+      "x": -122876.2109375,
+      "y": 759553.75
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Nalchik Red Air Defence #002",
+    "units": [ {
+      "heading": 6.2133722335271,
+      "name": "Nalchik Red Air Defence #002",
+      "skill": "Excellent",
+      "type": "Strela-10M3",
+      "x": -125669.40625,
+      "y": 757654.4375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Nalchik Red Air Defence #004",
+    "units": [ {
+      "heading": 6.2133722285833,
+      "name": "Nalchik Red Air Defence #004",
+      "skill": "Excellent",
+      "type": "Tor 9A331",
+      "x": -123149.82031237,
+      "y": 759827.49999999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Nalchik Red Air Defence #001",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Nalchik Red Air Defence #001",
+      "skill": "Excellent",
+      "type": "2S6 Tunguska",
+      "x": -124839.42968737,
+      "y": 760779.24999999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Nalchik Red Air Defence #013",
+    "units": [ {
+      "heading": 6.213372230482,
+      "name": "Nalchik Red Air Defence #013",
+      "skill": "Excellent",
+      "type": "Tor 9A331",
+      "x": -123090.96874987,
+      "y": 759112.81249999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Nalchik Red JTAC #006",
+    "units": [ {
+      "heading": 6.2133722452782,
+      "name": "Nalchik Red JTAC #006",
+      "skill": "Excellent",
+      "type": "UAZ-469",
+      "x": -125601.67187494,
+      "y": 760896.9375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Nalchik Red Heavy Armor  #002",
+    "units": [ {
+      "heading": 6.2133722334299,
+      "name": "Nalchik Red Heavy Armor #002",
+      "skill": "Excellent",
+      "type": "Leclerc",
+      "x": -123510.3984375,
+      "y": 760983.25
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Mozdok Red Air Defense #002",
+    "units": [ {
+      "heading": 6.2133722419422,
+      "name": "Mozdok Red Air Defense #002",
+      "skill": "Excellent",
+      "type": "2S6 Tunguska",
+      "x": -83094.929687374,
+      "y": 834887.12499999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Mozdok Red Air Defense #012",
+    "units": [ {
+      "heading": 6.213372228647,
+      "name": "Mozdok Red Air Defense #012",
+      "skill": "Excellent",
+      "type": "Tor 9A331",
+      "x": -85580.890624874,
+      "y": 832906.49999999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Mozdok Red Support #001",
+    "units": [ {
+      "heading": 6.2133722307803,
+      "name": "Mozdok Red Light Armor #001",
+      "skill": "Excellent",
+      "type": "Ural-375",
+      "x": -85025.703125,
+      "y": 833011.875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Mozdok Red Heavy Armor",
+    "units": [ {
+      "heading": 6.2133722332807,
+      "name": "Mozdok Red Heavy Armor",
+      "skill": "Excellent",
+      "type": "Leclerc",
+      "x": -84211.7578125,
+      "y": 834328.625
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Mozdok Red Air Defense #003",
+    "units": [ {
+      "heading": 6.2133722277638,
+      "name": "Mozdok Red Air Defense #003",
+      "skill": "Excellent",
+      "type": "Strela-10M3",
+      "x": -82594.5859375,
+      "y": 837046.75
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Mozdok Red Air Defense #001",
+    "units": [ {
+      "heading": 6.213372218565,
+      "name": "Mozdok Red Air Defense #001",
+      "skill": "Excellent",
+      "type": "Strela-10M3",
+      "x": -85939.734375,
+      "y": 833677.4375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Mozdok Red Air Defense",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #151",
+      "skill": "Excellent",
+      "type": "SA-11 Buk SR 9S18M1",
+      "x": -84824.124999874,
+      "y": 833050.125
+    }, {
+      "heading": 0,
+      "name": "Unit #152",
+      "skill": "Excellent",
+      "type": "SA-11 Buk SR 9S18M1",
+      "x": -84782.421874874,
+      "y": 832886.5625
+    }, {
+      "heading": 1.1368686482669e-13,
+      "name": "Unit #153",
+      "skill": "Excellent",
+      "type": "SA-11 Buk CC 9S470M1",
+      "x": -84912.148437374,
+      "y": 833020
+    }, {
+      "heading": 0,
+      "name": "Unit #154",
+      "skill": "Excellent",
+      "type": "SA-11 Buk CC 9S470M1",
+      "x": -84877.046874874,
+      "y": 832878.5
+    }, {
+      "heading": 2.8421746699903e-14,
+      "name": "Unit #155",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -85132.109374874,
+      "y": 833097
+    }, {
+      "heading": 0,
+      "name": "Unit #156",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -85137.421874874,
+      "y": 832929.4375
+    }, {
+      "heading": 0,
+      "name": "Unit #157",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -84962.046874874,
+      "y": 832820.8125
+    }, {
+      "heading": 0,
+      "name": "Unit #158",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -84980.226562374,
+      "y": 833142.875
+    }, {
+      "heading": 0,
+      "name": "Unit #159",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -84870.632812374,
+      "y": 832745.4375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Mozdok Red Heavy Armor #001",
+    "units": [ {
+      "heading": 6.2133722358499,
+      "name": "Mozdok Red Heavy Armor #001",
+      "skill": "Excellent",
+      "type": "Leclerc",
+      "x": -84729.1875,
+      "y": 835409.875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Mozdok Red JTAC #006",
+    "units": [ {
+      "heading": 6.213372235999,
+      "name": "Mozdok Red JTAC #006",
+      "skill": "Excellent",
+      "type": "UAZ-469",
+      "x": -84236.10156244,
+      "y": 834757.0625
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Maykop-Khanskaya Red Support #001",
+    "units": [ {
+      "heading": 6.2133722325467,
+      "name": "Maykop-Khanskaya Red Support #001",
+      "skill": "Excellent",
+      "type": "Ural-375",
+      "x": -28271.052734375,
+      "y": 459060.28125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Maykop-Khanskaya Red Air Defense #004",
+    "units": [ {
+      "heading": 6.2133722260141,
+      "name": "Maykop-Khanskaya Red Air Defense #003",
+      "skill": "Excellent",
+      "type": "Tor 9A331",
+      "x": -28892.792968624,
+      "y": 459582.40624999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Maykop-Khanskaya Red Air Defense #005",
+    "units": [ {
+      "heading": 6.2133722390959,
+      "name": "Maykop-Khanskaya Red Air Defense #004",
+      "skill": "Excellent",
+      "type": "Tor 9A331",
+      "x": -28835.373046749,
+      "y": 458884.87499999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Maykop-Khanskaya Red Air Defense #001",
+    "units": [ {
+      "heading": 6.2133722383493,
+      "name": "Maykop-Khanskaya Red Air Defense",
+      "skill": "Excellent",
+      "type": "2S6 Tunguska",
+      "x": -26423.808593624,
+      "y": 457685.56249999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Maykop-Khanskaya Red Air Defense #003",
+    "units": [ {
+      "heading": 6.2133722287157,
+      "name": "Maykop-Khanskaya Red Air Defense #002",
+      "skill": "Excellent",
+      "type": "Strela-10M3",
+      "x": -25353.9453125,
+      "y": 460546.65625
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Maykop-Khanskaya Red Air Defense #002",
+    "units": [ {
+      "heading": 6.2133722400479,
+      "name": "Maykop-Khanskaya Red Air Defense #001",
+      "skill": "Excellent",
+      "type": "Strela-10M3",
+      "x": -28471.955078125,
+      "y": 457946.78125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Maykop-Khanskaya Red JTAC #006",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Maykop-Khanskaya Red JTAC #006",
+      "skill": "Excellent",
+      "type": "UAZ-469",
+      "x": -26484.306640565,
+      "y": 459204.125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Maykop-Khanskaya Red Air Defense #006",
+    "units": [ {
+      "heading": 1.5184364257847,
+      "name": "Unit #207",
+      "skill": "Excellent",
+      "type": "SA-11 Buk SR 9S18M1",
+      "x": -28133.666015618,
+      "y": 459242.59375013
+    }, {
+      "heading": 1.5184364325178,
+      "name": "Unit #208",
+      "skill": "Excellent",
+      "type": "SA-11 Buk CC 9S470M1",
+      "x": -28257.347656243,
+      "y": 459139.06250013
+    }, {
+      "heading": 1.5184364319079,
+      "name": "Unit #209",
+      "skill": "Excellent",
+      "type": "SA-11 Buk CC 9S470M1",
+      "x": -28130.609374993,
+      "y": 459147.68750013
+    }, {
+      "heading": 1.5184364272791,
+      "name": "Unit #210",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -28338.525390618,
+      "y": 459010.84375013
+    }, {
+      "heading": 1.5184364344145,
+      "name": "Unit #211",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -28201.798828118,
+      "y": 458984.40625013
+    }, {
+      "heading": 1.5184364300111,
+      "name": "Unit #212",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -28077.402343743,
+      "y": 459059.78125013
+    }, {
+      "heading": 1.5184364295661,
+      "name": "Unit #215",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -28436.494140618,
+      "y": 459102.68750013
+    }, {
+      "heading": 1.5184364300111,
+      "name": "Unit #218",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -27997.345703118,
+      "y": 459147.12500013
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Maykop-Khanskaya Red Heavy Armor #002",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Maykop-Khanskaya Red Heavy Armor #002",
+      "skill": "Excellent",
+      "type": "Leclerc",
+      "x": -26391.970703125,
+      "y": 459292.71875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Maykop-Khanskaya Red Heavy Armor",
+    "units": [ {
+      "heading": 6.2133722281223,
+      "name": "Maykop-Khanskaya Red Heavy Armor",
+      "skill": "Excellent",
+      "type": "Leclerc",
+      "x": -27241.046875,
+      "y": 456940.125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Mineralnye Vody Red Support #001",
+    "units": [ {
+      "heading": 6.2133722334299,
+      "name": "Mineralnye Vody Red Light Armor #001",
+      "skill": "Excellent",
+      "type": "Ural-375",
+      "x": -50652.26953125,
+      "y": 703116.5625
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Mineralnye Vody Red Air Defense #005",
+    "units": [ {
+      "heading": 6.2133722340452,
+      "name": "Mineralnye Vody Red Air Defense #003",
+      "skill": "Excellent",
+      "type": "Strela-10M3",
+      "x": -54331.8515625,
+      "y": 704915.375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Mineralnye Vody Red Heavy Armor #002",
+    "units": [ {
+      "heading": 6.2133722297666,
+      "name": "Mineralnye Vody Red Heavy Armor #002",
+      "skill": "Excellent",
+      "type": "Leclerc",
+      "x": -52195.15234375,
+      "y": 705909.125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Mineralnye Vody Red Air Defense #002",
+    "units": [ {
+      "heading": 6.2133722289536,
+      "name": "Mineralnye Vody Red Air Defense #002",
+      "skill": "Excellent",
+      "type": "Strela-10M3",
+      "x": -51425.12109375,
+      "y": 703716.0625
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Mineralnye Vody Red Air Defense #012",
+    "units": [ {
+      "heading": 6.2133722387333,
+      "name": "Mineralnye Vody Red Air Defense #012",
+      "skill": "Excellent",
+      "type": "Tor 9A331",
+      "x": -50724.691406124,
+      "y": 702673.74999999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Mineralnye Vody Red Air Defense #003",
+    "units": [ {
+      "heading": 1.5184364288987,
+      "name": "Unit #194",
+      "skill": "Excellent",
+      "type": "SA-11 Buk SR 9S18M1",
+      "x": -50642.289062493,
+      "y": 703246.68750013
+    }, {
+      "heading": 1.5184364316334,
+      "name": "Unit #195",
+      "skill": "Excellent",
+      "type": "SA-11 Buk SR 9S18M1",
+      "x": -50476.746093743,
+      "y": 703279.75000013
+    }, {
+      "heading": 1.5184364291026,
+      "name": "Unit #196",
+      "skill": "Excellent",
+      "type": "SA-11 Buk CC 9S470M1",
+      "x": -50616.828124993,
+      "y": 703157.18750013
+    }, {
+      "heading": 1.5184364292185,
+      "name": "Unit #197",
+      "skill": "Excellent",
+      "type": "SA-11 Buk CC 9S470M1",
+      "x": -50473.691406243,
+      "y": 703184.81250013
+    }, {
+      "heading": 1.5184364299162,
+      "name": "Unit #198",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -50681.605468743,
+      "y": 703048.00000013
+    }, {
+      "heading": 1.5184364253824,
+      "name": "Unit #199",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -50544.878906243,
+      "y": 703021.56250013
+    }, {
+      "heading": 1.5184364331704,
+      "name": "Unit #200",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -50420.484374993,
+      "y": 703096.93750013
+    }, {
+      "heading": 1.5184364299162,
+      "name": "Unit #201",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -50779.574218743,
+      "y": 703139.81250013
+    }, {
+      "heading": 1.5184364239918,
+      "name": "Unit #202",
+      "skill": "Excellent",
+      "type": "SA-11 Buk LN 9A310M1",
+      "x": -50340.425781243,
+      "y": 703184.25000013
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "Mineralnye Vody Red JTAC #006",
+    "units": [ {
+      "heading": 6.213372241302,
+      "name": "Mineralnye Vody Red JTAC #006",
+      "skill": "Excellent",
+      "type": "UAZ-469",
+      "x": -52355.96093744,
+      "y": 705899.0625
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Mineralnye Vody Red Heavy Armor #001",
+    "units": [ {
+      "heading": 6.2133722302809,
+      "name": "Mineralnye Vody Red Heavy Armor #001",
+      "skill": "Excellent",
+      "type": "Leclerc",
+      "x": -50270.5078125,
+      "y": 705502.0625
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 7,
+    "name": "Mineralnye Vody Red Air Defense #001",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Mineralnye Vody Red Air Defense #001",
+      "skill": "Excellent",
+      "type": "2S6 Tunguska",
+      "x": -51171.160156124,
+      "y": 706552.37499999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 6,
+    "name": "Sukhumi-Babushara Blue Air Defense #002",
+    "units": [ {
+      "heading": 6.2133722345711,
+      "name": "Sukhumi-Babushara Blue Air Defense #005",
+      "skill": "Excellent",
+      "type": "Gepard",
+      "x": -220280.12499986,
+      "y": 564761.62499999
+    }, {
+      "heading": 6.2133722345711,
+      "name": "Unit #046",
+      "skill": "Excellent",
+      "type": "Gepard",
+      "x": -220320.03124986,
+      "y": 564764.37499999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Sukhumi-Babushara Blue Heavy Armor  #002",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Sukhumi-Babushara Blue Heavy Armor  #002",
+      "skill": "Excellent",
+      "type": "M-1 Abrams",
+      "x": -219557.96875,
+      "y": 564664.1875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Sukhumi-Babushara Blue Air Defense #006",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Sukhumi-Babushara Blue Air Defense #006",
+      "skill": "Excellent",
+      "type": "M1097 Avenger",
+      "x": -218708.28124995,
+      "y": 561877.5
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Sukhumi-Babushara Blue Air Defense #012",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Sukhumi-Babushara Blue Air Defense #011",
+      "skill": "Excellent",
+      "type": "Roland Radar",
+      "x": -222221.375,
+      "y": 562958.3125
+    }, {
+      "heading": 6.2133722345711,
+      "name": "Unit #042",
+      "skill": "Excellent",
+      "type": "Roland ADS",
+      "x": -222238.39062489,
+      "y": 563037.74999999
+    }, {
+      "heading": 6.2133722345711,
+      "name": "Unit #043",
+      "skill": "Excellent",
+      "type": "Roland ADS",
+      "x": -222222.93749989,
+      "y": 562968.24999999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Sukhumi-Babushara Blue JTAC #007",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Sukhumi-Babushara Blue JTAC #007",
+      "skill": "Excellent",
+      "type": "Hummer",
+      "x": -219240.18749995,
+      "y": 563584.5625
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Sukhumi-Babushara Blue Heavy Armor  #001",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Sukhumi-Babushara Blue Heavy Armor  #001",
+      "skill": "Excellent",
+      "type": "M-1 Abrams",
+      "x": -219306.765625,
+      "y": 563000.5
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Sukhumi-Babushara Blue Air Defense #001",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Sukhumi-Babushara Blue Air Defense #001",
+      "skill": "Excellent",
+      "type": "Roland Radar",
+      "x": -222874.96875,
+      "y": 564144.6875
+    }, {
+      "heading": 6.2133722345711,
+      "name": "Unit #424",
+      "skill": "Excellent",
+      "type": "Roland ADS",
+      "x": -222891.14062489,
+      "y": 564144.68749999
+    }, {
+      "heading": 6.2133722345711,
+      "name": "Unit #425",
+      "skill": "Excellent",
+      "type": "Roland ADS",
+      "x": -222876.53124989,
+      "y": 564154.62499999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Sukhumi-Babushara Blue Support #001",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Sukhumi-Babushara Blue Light Armor #001",
+      "skill": "Excellent",
+      "type": "M 818",
+      "x": -222516.296875,
+      "y": 563332.6875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Sukhumi-Babushara Blue Air Defense #003",
+    "units": [ {
+      "heading": 0.82030473865531,
+      "name": "Unit #444",
+      "skill": "Excellent",
+      "type": "Hawk pcp",
+      "x": -222641.078125,
+      "y": 563627.5625
+    }, {
+      "heading": 0.82030473865531,
+      "name": "Unit #445",
+      "skill": "Excellent",
+      "type": "Hawk sr",
+      "x": -222501.078125,
+      "y": 563547.8125
+    }, {
+      "heading": 0.82030473865531,
+      "name": "Unit #446",
+      "skill": "Excellent",
+      "type": "Hawk cwar",
+      "x": -222775.234375,
+      "y": 563665.25
+    }, {
+      "heading": 4.660028935181,
+      "name": "Unit #447",
+      "skill": "Excellent",
+      "type": "Hawk tr",
+      "x": -222668.953125,
+      "y": 563444
+    }, {
+      "heading": 5.5326938875247,
+      "name": "Unit #448",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -222402.859375,
+      "y": 563253.25
+    }, {
+      "heading": 4.660028935181,
+      "name": "Unit #449",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -222578.6875,
+      "y": 563219.25
+    }, {
+      "heading": 3.4382984542179,
+      "name": "Unit #450",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -222843.40625,
+      "y": 563429.125
+    }, {
+      "heading": 1.5184363113527,
+      "name": "Unit #451",
+      "skill": "Excellent",
+      "type": "Hawk tr",
+      "x": -222644.171875,
+      "y": 563799.75
+    }, {
+      "heading": 0.29670594948191,
+      "name": "Unit #452",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -222408.53125,
+      "y": 563434.75
+    }, {
+      "heading": 1.5184363113527,
+      "name": "Unit #453",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -222664.09375,
+      "y": 563914.75
+    }, {
+      "heading": 2.3911011496926,
+      "name": "Unit #454",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -222855.21875,
+      "y": 563859.8125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Sukhumi-Babushara Blue Air Defense #008",
+    "units": [ {
+      "heading": 6.2133722313525,
+      "name": "Sukhumi-Babushara Blue Air Defense #008",
+      "skill": "Excellent",
+      "type": "M1097 Avenger",
+      "x": -220516.29687495,
+      "y": 566674.6875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Batumi Blue Heavy Armor #002",
+    "units": [ {
+      "heading": 0.64577177352219,
+      "name": "Unit #103",
+      "skill": "Excellent",
+      "type": "M-1 Abrams",
+      "x": -355266.09375,
+      "y": 617211.875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Batumi Blue Air Defense #013",
+    "units": [ {
+      "heading": 0.64577182856411,
+      "name": "Unit #121",
+      "skill": "Excellent",
+      "type": "M1097 Avenger",
+      "x": -356825.24999996,
+      "y": 617119.62500003
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Batumi Blue Air Defense #012",
+    "units": [ {
+      "heading": 0.64577185834902,
+      "name": "Unit #120",
+      "skill": "Excellent",
+      "type": "M1097 Avenger",
+      "x": -354690.09374996,
+      "y": 616362.37500003
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 6,
+    "name": "Batumi Blue Air Defense #001",
+    "units": [ {
+      "heading": 0.64577178525361,
+      "name": "Unit #022",
+      "skill": "Excellent",
+      "type": "Gepard",
+      "x": -356093.90624989,
+      "y": 617064.25000008
+    }, {
+      "heading": 0.64577178519191,
+      "name": "Unit #023",
+      "skill": "Excellent",
+      "type": "Gepard",
+      "x": -356125.87499989,
+      "y": 617040.18750008
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Batumi Blue Air Defense #004",
+    "units": [ {
+      "heading": 1.5184364303986,
+      "name": "Unit #244",
+      "skill": "Excellent",
+      "type": "Hawk pcp",
+      "x": -356617.09375,
+      "y": 619027.8125
+    }, {
+      "heading": 1.5184364303986,
+      "name": "Unit #246",
+      "skill": "Excellent",
+      "type": "Hawk cwar",
+      "x": -356744.03125,
+      "y": 618970.4375
+    }, {
+      "heading": 5.358160968456,
+      "name": "Unit #247",
+      "skill": "Excellent",
+      "type": "Hawk tr",
+      "x": -356520.40625,
+      "y": 618869.25
+    }, {
+      "heading": 6.230825425664,
+      "name": "Unit #248",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -356391.875,
+      "y": 618899.125
+    }, {
+      "heading": 5.358160968456,
+      "name": "Unit #249",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -356448.1875,
+      "y": 618730.25
+    }, {
+      "heading": 4.1364302550589,
+      "name": "Unit #250",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -356644.5,
+      "y": 618745.75
+    }, {
+      "heading": 2.2165682313928,
+      "name": "Unit #251",
+      "skill": "Excellent",
+      "type": "Hawk tr",
+      "x": -356730.09375,
+      "y": 619157.6875
+    }, {
+      "heading": 0.99483773390939,
+      "name": "Unit #254",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -356465.96875,
+      "y": 619222.9375
+    }, {
+      "heading": 2.2165682313928,
+      "name": "Unit #255",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -356819.3125,
+      "y": 619233.0625
+    }, {
+      "heading": 3.0892326827898,
+      "name": "Unit #256",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -356930.40625,
+      "y": 619068.125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Batumi Blue Air Defense #003",
+    "units": [ {
+      "heading": 6.2133722361883,
+      "name": "Vaziani Blue Air Defense #003",
+      "skill": "Excellent",
+      "type": "Roland ADS",
+      "x": -357025.59374989,
+      "y": 618349.31249999
+    }, {
+      "heading": 6.2133722364062,
+      "name": "Unit #133",
+      "skill": "Excellent",
+      "type": "Roland ADS",
+      "x": -357031.93749989,
+      "y": 618443.12499999
+    }, {
+      "heading": 6.2133722245981,
+      "name": "Unit #134",
+      "skill": "Excellent",
+      "type": "Roland Radar",
+      "x": -357103.1875,
+      "y": 618400.1875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Batumi Blue Air Defense #002",
+    "units": [ {
+      "heading": 6.2133722432708,
+      "name": "Vaziani Blue Air Defense #004",
+      "skill": "Excellent",
+      "type": "Roland ADS",
+      "x": -356062.43749989,
+      "y": 619474.81249999
+    }, {
+      "heading": 6.2133722298218,
+      "name": "Unit #242",
+      "skill": "Excellent",
+      "type": "Roland ADS",
+      "x": -356058.18749989,
+      "y": 619587.06249999
+    }, {
+      "heading": 6.2133722377188,
+      "name": "Unit #243",
+      "skill": "Excellent",
+      "type": "Roland Radar",
+      "x": -356140.03125,
+      "y": 619525.6875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Batumi Blue JTAC #007",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Batumi Blue JTAC #007",
+      "skill": "Excellent",
+      "type": "Hummer",
+      "x": -355690.99999995,
+      "y": 617862.4375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Batumi Blue Support #001",
+    "units": [ {
+      "heading": 6.213372229381,
+      "name": "Batumi Blue Light Armor #001",
+      "skill": "Excellent",
+      "type": "M 818",
+      "x": -356548.71875,
+      "y": 618830.75
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Batumi Blue Heavy Armor",
+    "units": [ {
+      "heading": 0.64577177352219,
+      "name": "Batumi Blue Heavy Armor",
+      "skill": "Excellent",
+      "type": "M-1 Abrams",
+      "x": -355875.46875,
+      "y": 616447.8125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Vaziani Blue Heavy Armor  #002",
+    "units": [ {
+      "heading": 6.2133722401167,
+      "name": "Vaziani Blue Heavy Armor  #002",
+      "skill": "Excellent",
+      "type": "M-1 Abrams",
+      "x": -318568.59375,
+      "y": 903618.3125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Vaziani Blue Air Defense #008",
+    "units": [ {
+      "heading": 6.2133722437809,
+      "name": "Vaziani Blue Air Defense #008",
+      "skill": "Excellent",
+      "type": "M1097 Avenger",
+      "x": -319762.84374995,
+      "y": 900624.6875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Vaziani Blue Air Defense #009",
+    "units": [ {
+      "heading": 6.2133722294313,
+      "name": "Vaziani Blue Air Defense #009",
+      "skill": "Excellent",
+      "type": "M1097 Avenger",
+      "x": -316468.99999995,
+      "y": 902632.375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Vaziani Blue Air Defense #012",
+    "units": [ {
+      "heading": 6.2133722301552,
+      "name": "Vaziani Blue Air Defense #012",
+      "skill": "Excellent",
+      "type": "Roland ADS",
+      "x": -318964.84374989,
+      "y": 902721.49999999
+    }, {
+      "heading": 6.2133722322886,
+      "name": "Unit #252",
+      "skill": "Excellent",
+      "type": "Roland ADS",
+      "x": -318960.59374989,
+      "y": 902833.74999999
+    }, {
+      "heading": 6.2133722334299,
+      "name": "Unit #253",
+      "skill": "Excellent",
+      "type": "Roland Radar",
+      "x": -319042.4375,
+      "y": 902772.375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Vaziani Blue Air Defense #002",
+    "units": [ {
+      "heading": 6.2133722432538,
+      "name": "Vaziani Blue Air Defense #002",
+      "skill": "Excellent",
+      "type": "Roland ADS",
+      "x": -318450.87499989,
+      "y": 902209.68749999
+    }, {
+      "heading": 6.2133722345711,
+      "name": "Unit #236",
+      "skill": "Excellent",
+      "type": "Roland ADS",
+      "x": -318446.62499989,
+      "y": 902321.93749999
+    }, {
+      "heading": 6.2133722325467,
+      "name": "Unit #237",
+      "skill": "Excellent",
+      "type": "Roland Radar",
+      "x": -318528.46875,
+      "y": 902260.5625
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Vaziani Blue Support #001",
+    "units": [ {
+      "heading": 6.2133722334299,
+      "name": "Vaziani Blue Light Armor #001",
+      "skill": "Excellent",
+      "type": "M 818",
+      "x": -319180.96875,
+      "y": 902022.5625
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Vaziani Blue Air Defense #013",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #014",
+      "skill": "Excellent",
+      "type": "Hawk pcp",
+      "x": -319055.125,
+      "y": 902197.375
+    }, {
+      "heading": 0,
+      "name": "Unit #124",
+      "skill": "Excellent",
+      "type": "Hawk sr",
+      "x": -319018,
+      "y": 902040.5625
+    }, {
+      "heading": 0,
+      "name": "Unit #126",
+      "skill": "Excellent",
+      "type": "Hawk cwar",
+      "x": -319119.09375,
+      "y": 902321.125
+    }, {
+      "heading": 3.83972429342,
+      "name": "Unit #127",
+      "skill": "Excellent",
+      "type": "Hawk tr",
+      "x": -319187.78125,
+      "y": 902192.625
+    }, {
+      "heading": 4.7123889923096,
+      "name": "Unit #128",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -319102.03125,
+      "y": 901858.625
+    }, {
+      "heading": 3.83972429342,
+      "name": "Unit #129",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -319296.625,
+      "y": 901934.125
+    }, {
+      "heading": 2.6179938186005,
+      "name": "Unit #130",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -319334.03125,
+      "y": 902087.1875
+    }, {
+      "heading": 0.69813163983021,
+      "name": "Unit #135",
+      "skill": "Excellent",
+      "type": "Hawk tr",
+      "x": -318931.34375,
+      "y": 902317
+    }, {
+      "heading": 5.7595863391497,
+      "name": "Unit #137",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -318852.375,
+      "y": 902056.6875
+    }, {
+      "heading": 0.69813163983021,
+      "name": "Unit #138",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -318860.8125,
+      "y": 902410.0625
+    }, {
+      "heading": 1.5707963705063,
+      "name": "Unit #139",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -319031.3125,
+      "y": 902512.375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Vaziani Blue Light Armor #006",
+    "units": [ {
+      "heading": 6.2133722345711,
+      "name": "Vaziani Blue Light Armor #006",
+      "skill": "Excellent",
+      "type": "M1134 Stryker ATGM",
+      "x": -318693.74999988,
+      "y": 903366.24999999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Vaziani Blue Heavy Armor  #001",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Vaziani Blue Heavy Armor  #001",
+      "skill": "Excellent",
+      "type": "M-1 Abrams",
+      "x": -318930.5,
+      "y": 904014.6875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 6,
+    "name": "Vaziani Blue Air Defense #001",
+    "units": [ {
+      "heading": 6.2133722345711,
+      "name": "Vaziani Blue Air Defense #001",
+      "skill": "Excellent",
+      "type": "Gepard",
+      "x": -319195.06249986,
+      "y": 903480.93749999
+    }, {
+      "heading": 6.2133722345711,
+      "name": "Unit #161",
+      "skill": "Excellent",
+      "type": "Gepard",
+      "x": -319234.09374986,
+      "y": 903490.49999999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Vaziani Blue JTAC #007",
+    "units": [ {
+      "heading": 6.2133722298972,
+      "name": "Vaziani Blue JTAC #007",
+      "skill": "Excellent",
+      "type": "Hummer",
+      "x": -318182.37499995,
+      "y": 903328.5
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Senaki-Kolkhi Blue Heavy Armor  #001",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Senaki-Kolkhi Blue Heavy Armor  #001",
+      "skill": "Excellent",
+      "type": "M-1 Abrams",
+      "x": -281202.1875,
+      "y": 646415.75
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 6,
+    "name": "Senaki-Kolkhi Blue Air Defense #003",
+    "units": [ {
+      "heading": 6.2482786202946,
+      "name": "Unit #259",
+      "skill": "Excellent",
+      "type": "Gepard",
+      "x": -282071.87499986,
+      "y": 646449.375
+    }, {
+      "heading": 6.2482786216066,
+      "name": "Unit #414",
+      "skill": "Excellent",
+      "type": "Gepard",
+      "x": -282111.84374986,
+      "y": 646450.75
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Senaki-Kolkhi Blue Air Defense #010",
+    "units": [ {
+      "heading": 6.2482786188874,
+      "name": "Unit #213",
+      "skill": "Excellent",
+      "type": "M1097 Avenger",
+      "x": -281130.84374995,
+      "y": 649618.375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Senaki-Kolkhi Blue JTAC  #007",
+    "units": [ {
+      "heading": 6.2133722239612,
+      "name": "Senaki-Kolkhi Blue JTAC  #007",
+      "skill": "Excellent",
+      "type": "Hummer",
+      "x": -280634.68749995,
+      "y": 647037.5625
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Senaki-Kolkhi Red Air Defense #005",
+    "units": [ {
+      "heading": 2.4260077599705,
+      "name": "Unit #432",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -283300.1875,
+      "y": 645485.25
+    }, {
+      "heading": 0.50614546434454,
+      "name": "Unit #433",
+      "skill": "Excellent",
+      "type": "Hawk tr",
+      "x": -282852.25,
+      "y": 645688.75
+    }, {
+      "heading": 0.50614546434454,
+      "name": "Unit #435",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -282765.25,
+      "y": 645766.625
+    }, {
+      "heading": 1.3788101485203,
+      "name": "Unit #436",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -282913.09375,
+      "y": 645899.5625
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Senaki-Kolkhi Blue Air Defense #011",
+    "units": [ {
+      "heading": 6.2482786249971,
+      "name": "Unit #214",
+      "skill": "Excellent",
+      "type": "M1097 Avenger",
+      "x": -280605.37499995,
+      "y": 644989.875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Senaki-Kolkhi Blue Heavy Armor ",
+    "units": [ {
+      "heading": 6.2133722304301,
+      "name": "Senaki-Kolkhi Blue Heavy Armor ",
+      "skill": "Excellent",
+      "type": "M-1 Abrams",
+      "x": -280690.1875,
+      "y": 647135.0625
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Senaki-Kolkhi Blue Air Defense #002",
+    "units": [ {
+      "heading": 0,
+      "name": "Blue Roland #007",
+      "skill": "Excellent",
+      "type": "Roland ADS",
+      "x": -282791.78124988,
+      "y": 646316.875
+    }, {
+      "heading": 3.5527208785951e-15,
+      "name": "Unit #204",
+      "skill": "Excellent",
+      "type": "Roland Radar",
+      "x": -282806.71875,
+      "y": 646297.6875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Sochi-Addler Blue Heavy Armor #002",
+    "units": [ {
+      "heading": 6.2133722307721,
+      "name": "Sochi-Addler Blue Heavy Armor #002",
+      "skill": "Excellent",
+      "type": "M-1 Abrams",
+      "x": -163827.671875,
+      "y": 462089.8125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Sochi-Addler Blue Air Defense #005",
+    "units": [ {
+      "heading": 0.82030473865531,
+      "name": "Unit #456",
+      "skill": "Excellent",
+      "type": "Hawk pcp",
+      "x": -166344.125,
+      "y": 462833.71875
+    }, {
+      "heading": 0.82030473865531,
+      "name": "Unit #457",
+      "skill": "Excellent",
+      "type": "Hawk sr",
+      "x": -166292.125,
+      "y": 462829.375
+    }, {
+      "heading": 0.82030473865531,
+      "name": "Unit #458",
+      "skill": "Excellent",
+      "type": "Hawk cwar",
+      "x": -166398.03125,
+      "y": 462837.40625
+    }, {
+      "heading": 4.6600289389012,
+      "name": "Unit #459",
+      "skill": "Excellent",
+      "type": "Hawk tr",
+      "x": -166351.734375,
+      "y": 462740.3125
+    }, {
+      "heading": 5.5326938875247,
+      "name": "Unit #460",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -166281.734375,
+      "y": 462702.1875
+    }, {
+      "heading": 4.6600289389012,
+      "name": "Unit #461",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -166354.34375,
+      "y": 462655.8125
+    }, {
+      "heading": 3.4382987059987,
+      "name": "Unit #462",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -166420.796875,
+      "y": 462709.625
+    }, {
+      "heading": 1.5184364303986,
+      "name": "Unit #463",
+      "skill": "Excellent",
+      "type": "Hawk tr",
+      "x": -166342.390625,
+      "y": 462919.78125
+    }, {
+      "heading": 0.29670597798201,
+      "name": "Unit #464",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -166266.265625,
+      "y": 462956.09375
+    }, {
+      "heading": 1.5184364266784,
+      "name": "Unit #465",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -166330.25,
+      "y": 463011.65625
+    }, {
+      "heading": 2.3911011496926,
+      "name": "Unit #466",
+      "skill": "Excellent",
+      "type": "Hawk ln",
+      "x": -166408.984375,
+      "y": 462965.3125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Sochi-Addler Blue Heavy Armor",
+    "units": [ {
+      "heading": 6.2133722280251,
+      "name": "Sochi-Addler Blue Heavy Armor",
+      "skill": "Excellent",
+      "type": "M-1 Abrams",
+      "x": -164216.453125,
+      "y": 461542.75
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Sochi-Addler Blue Air Defense #003",
+    "units": [ {
+      "heading": 6.2133722323157,
+      "name": "Sochi-Addler Blue Air Defense #003",
+      "skill": "Excellent",
+      "type": "M1097 Avenger",
+      "x": -167443.48437495,
+      "y": 462889.46875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Sochi-Addler Blue Air Defense #002",
+    "units": [ {
+      "heading": 6.2133722306312,
+      "name": "Sochi-Addler Blue Air Defense #002",
+      "skill": "Excellent",
+      "type": "Roland Radar",
+      "x": -166426.71875,
+      "y": 462298.59375
+    }, {
+      "heading": 6.2133722382699,
+      "name": "Unit #063",
+      "skill": "Excellent",
+      "type": "Roland ADS",
+      "x": -166410.67187489,
+      "y": 462329.46874999
+    }, {
+      "heading": 6.2133722382699,
+      "name": "Unit #064",
+      "skill": "Excellent",
+      "type": "Roland ADS",
+      "x": -166435.81249989,
+      "y": 462343.81249999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Sochi-Addler Blue Air Defense #007",
+    "units": [ {
+      "heading": 6.213372227591,
+      "name": "Sochi-Addler Blue Air Defense #007",
+      "skill": "Excellent",
+      "type": "M1097 Avenger",
+      "x": -161867.15624995,
+      "y": 462009.09375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Sochi-Addler Blue Support #001",
+    "units": [ {
+      "heading": 6.2133722399157,
+      "name": "Sochi-Addler Blue Light Armor #001",
+      "skill": "Excellent",
+      "type": "M 818",
+      "x": -166311.296875,
+      "y": 462957
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 6,
+    "name": "Sochi-Addler Blue Air Defense #001",
+    "units": [ {
+      "heading": 6.2133722345711,
+      "name": "Sochi-Addler Blue Air Defense #001",
+      "skill": "Excellent",
+      "type": "Gepard",
+      "x": -164356.96874986,
+      "y": 462911.49999999
+    }, {
+      "heading": 6.2133722345711,
+      "name": "Unit #455",
+      "skill": "Excellent",
+      "type": "Gepard",
+      "x": -164396.87499986,
+      "y": 462914.28124999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Sochi-Addler Blue Air Defense #012",
+    "units": [ {
+      "heading": 6.2133722382636,
+      "name": "Sochi-Addler Blue Air Defense #011",
+      "skill": "Excellent",
+      "type": "Roland Radar",
+      "x": -166114.265625,
+      "y": 463235.96875
+    }, {
+      "heading": 6.2133722341055,
+      "name": "Unit #056",
+      "skill": "Excellent",
+      "type": "Roland ADS",
+      "x": -166086.34374989,
+      "y": 463261.46874999
+    }, {
+      "heading": 6.2133722341055,
+      "name": "Unit #057",
+      "skill": "Excellent",
+      "type": "Roland ADS",
+      "x": -166120.32812489,
+      "y": 463262.68749999
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Sochi-Addler Blue JTAC #007",
+    "units": [ {
+      "heading": 6.2133722312965,
+      "name": "Sochi-Addler Blue JTAC #007",
+      "skill": "Excellent",
+      "type": "Hummer",
+      "x": -164677.93749995,
+      "y": 462457.25
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "EK51 RED RR Trucks #002",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #397",
+      "skill": "Excellent",
+      "type": "Ural-375",
+      "x": -61718.73046875,
+      "y": 435469.6875
+    }, {
+      "heading": 0,
+      "name": "Unit #398",
+      "skill": "Excellent",
+      "type": "ATZ-10",
+      "x": -61719.9375,
+      "y": 435477.90625
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "DK65 RED RR Trucks #002",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #401",
+      "skill": "Excellent",
+      "type": "Ural-375",
+      "x": -26925.677734375,
+      "y": 340573.53125
+    }, {
+      "heading": 1.7482612194444e-07,
+      "name": "Unit #402",
+      "skill": "Excellent",
+      "type": "ATZ-10",
+      "x": -26926.8828125,
+      "y": 340581.78125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "EK14 RED RR Trucks #002",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #399",
+      "skill": "Excellent",
+      "type": "Ural-375",
+      "x": -31988.462890625,
+      "y": 391017.5625
+    }, {
+      "heading": 0,
+      "name": "Unit #400",
+      "skill": "Excellent",
+      "type": "ATZ-10",
+      "x": -31989.66796875,
+      "y": 391025.8125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "EK20 RED RR Trucks #002",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #395",
+      "skill": "Excellent",
+      "type": "Ural-375",
+      "x": -71970.265625,
+      "y": 401736.875
+    }, {
+      "heading": 0,
+      "name": "Unit #396",
+      "skill": "Excellent",
+      "type": "ATZ-10",
+      "x": -71971.46875,
+      "y": 401745.125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "FJ69 RED RR Trucks #002",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #389",
+      "skill": "Excellent",
+      "type": "Ural-375",
+      "x": -71547.8515625,
+      "y": 540493.6875
+    }, {
+      "heading": 0,
+      "name": "Unit #390",
+      "skill": "Excellent",
+      "type": "ATZ-10",
+      "x": -71549.0625,
+      "y": 540501.9375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "GJ06 Red RR Trucks",
+    "units": [ {
+      "heading": 0,
+      "name": "GJ06 Red Ammo Truck",
+      "skill": "Excellent",
+      "type": "Ural-375",
+      "x": -100893.1171875,
+      "y": 582647.875
+    }, {
+      "heading": 0,
+      "name": "GJ06 Red Fuel Truck",
+      "skill": "Excellent",
+      "type": "ATZ-10",
+      "x": -100892.859375,
+      "y": 582658.1875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "GJ39 Red RR Trucks",
+    "units": [ {
+      "heading": 0,
+      "name": "GJ39 Red Ammo Truck",
+      "skill": "Excellent",
+      "type": "Ural-375",
+      "x": -72193.5703125,
+      "y": 616751.3125
+    }, {
+      "heading": 0,
+      "name": "GJ39 Red Fuel Truck",
+      "skill": "Excellent",
+      "type": "ATZ-10",
+      "x": -72194.7734375,
+      "y": 616759.5625
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "KP74 RED RR Trucks #002",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #383",
+      "skill": "Excellent",
+      "type": "Ural-375",
+      "x": -111177.328125,
+      "y": 643722.75
+    }, {
+      "heading": 0,
+      "name": "Unit #384",
+      "skill": "Excellent",
+      "type": "ATZ-10",
+      "x": -111178.5390625,
+      "y": 643731
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "LP31 RED RR Trucks #002",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #369",
+      "skill": "Excellent",
+      "type": "Ural-375",
+      "x": -140416.3125,
+      "y": 707825.9375
+    }, {
+      "heading": 0,
+      "name": "Unit #370",
+      "skill": "Excellent",
+      "type": "ATZ-10",
+      "x": -140417.515625,
+      "y": 707834.1875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "LP17 RED RR Trucks #002",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #381",
+      "skill": "Excellent",
+      "type": "Ural-375",
+      "x": -83898.328125,
+      "y": 677032.5
+    }, {
+      "heading": 0,
+      "name": "Unit #382",
+      "skill": "Excellent",
+      "type": "ATZ-10",
+      "x": -83899.53125,
+      "y": 677040.6875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "LP65 RED RR Trucks #002",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #379",
+      "skill": "Excellent",
+      "type": "Ural-375",
+      "x": -89436.671875,
+      "y": 732113.9375
+    }, {
+      "heading": 0,
+      "name": "Unit #380",
+      "skill": "Excellent",
+      "type": "ATZ-10",
+      "x": -89437.8828125,
+      "y": 732122.1875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "MP24 RED RR Trucks #002",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #377",
+      "skill": "Excellent",
+      "type": "Ural-375",
+      "x": -95813.3125,
+      "y": 793575.5625
+    }, {
+      "heading": 0,
+      "name": "Unit #378",
+      "skill": "Excellent",
+      "type": "ATZ-10",
+      "x": -95814.515625,
+      "y": 793583.8125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "MN34 RED RR Trucks #002",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #373",
+      "skill": "Excellent",
+      "type": "Ural-375",
+      "x": -188136.6875,
+      "y": 812924.9375
+    }, {
+      "heading": 0,
+      "name": "Unit #374",
+      "skill": "Excellent",
+      "type": "ATZ-10",
+      "x": -188137.890625,
+      "y": 812933.1875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "MN12 RED RR Trucks #002",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #375",
+      "skill": "Excellent",
+      "type": "Ural-375",
+      "x": -213531.953125,
+      "y": 803593.4375
+    }, {
+      "heading": 0,
+      "name": "Unit #376",
+      "skill": "Excellent",
+      "type": "ATZ-10",
+      "x": -213533.15625,
+      "y": 803601.6875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "LN21 Blue RR Trucks",
+    "units": [ {
+      "heading": 0,
+      "name": "LN21 Blue Fuel Truck",
+      "skill": "Excellent",
+      "type": "M978 HEMTT Tanker",
+      "x": -233077.84375,
+      "y": 710291.125
+    }, {
+      "heading": 0,
+      "name": "LN21 Blue Ammo Truck",
+      "skill": "Excellent",
+      "type": "M 818",
+      "x": -233078.765625,
+      "y": 710299.4375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "FJ03 Blue RR Trucks #003",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #026",
+      "skill": "Excellent",
+      "type": "M978 HEMTT Tanker",
+      "x": -135356.453125,
+      "y": 486877.28125
+    }, {
+      "heading": 6.2831850051804,
+      "name": "Unit #027",
+      "skill": "Excellent",
+      "type": "M 818",
+      "x": -135356.171875,
+      "y": 486883.53125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "BlueBeachhead Blue RR Trucks #002",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #018",
+      "skill": "Excellent",
+      "type": "M978 HEMTT Tanker",
+      "x": 14768.8203125,
+      "y": 190117.296875
+    }, {
+      "heading": 0,
+      "name": "Unit #019",
+      "skill": "Excellent",
+      "type": "M 818",
+      "x": 14768.032226563,
+      "y": 190127.546875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "LN16 Blue RR Trucks",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #355",
+      "skill": "Excellent",
+      "type": "M978 HEMTT Tanker",
+      "x": -186080.25,
+      "y": 694094.3125
+    }, {
+      "heading": 0,
+      "name": "Unit #356",
+      "skill": "Excellent",
+      "type": "M 818",
+      "x": -186081.171875,
+      "y": 694102.6875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "GG19 Blue RR Trucks",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #357",
+      "skill": "Excellent",
+      "type": "M978 HEMTT Tanker",
+      "x": -195881.328125,
+      "y": 656366.125
+    }, {
+      "heading": 0,
+      "name": "Unit #358",
+      "skill": "Excellent",
+      "type": "M 818",
+      "x": -195882.25,
+      "y": 656374.5
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "GH17 Blue RR Trucks #002",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #359",
+      "skill": "Excellent",
+      "type": "M978 HEMTT Tanker",
+      "x": -191219.203125,
+      "y": 605437.1875
+    }, {
+      "heading": 0,
+      "name": "Unit #360",
+      "skill": "Excellent",
+      "type": "M 818",
+      "x": -191220.125,
+      "y": 605445.5625
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "GG19 Blue RR Trucks #001",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #335",
+      "skill": "Excellent",
+      "type": "M978 HEMTT Tanker",
+      "x": -233489.578125,
+      "y": 597202.125
+    }, {
+      "heading": 0,
+      "name": "Unit #336",
+      "skill": "Excellent",
+      "type": "M 818",
+      "x": -233490.09375,
+      "y": 597210.0625
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "KN53 Blue RR Trucks",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #337",
+      "skill": "Excellent",
+      "type": "M978 HEMTT Tanker",
+      "x": -231235.8125,
+      "y": 641337.5625
+    }, {
+      "heading": 0,
+      "name": "Unit #338",
+      "skill": "Excellent",
+      "type": "M 818",
+      "x": -231236.734375,
+      "y": 641345.9375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "GH03 Blue RR Trucks",
+    "units": [ {
+      "heading": 1.4311699817315,
+      "name": "Unit #333",
+      "skill": "Excellent",
+      "type": "M978 HEMTT Tanker",
+      "x": -268439.65625,
+      "y": 609372.25
+    }, {
+      "heading": 1.413716671644,
+      "name": "Unit #334",
+      "skill": "Excellent",
+      "type": "M 818",
+      "x": -268456.21875,
+      "y": 609374.875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "KN70 Blue RR Trucks",
+    "units": [ {
+      "heading": 0,
+      "name": "KN70 Blue Fuel Truck",
+      "skill": "Excellent",
+      "type": "M978 HEMTT Tanker",
+      "x": -252134.609375,
+      "y": 665982.0625
+    }, {
+      "heading": 0,
+      "name": "KN70 Blue Ammo Truck",
+      "skill": "Excellent",
+      "type": "M 818",
+      "x": -252135.359375,
+      "y": 665992.125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "LN90 Blue RR Trucks #002",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #111",
+      "skill": "Excellent",
+      "type": "M978 HEMTT Tanker",
+      "x": -239909.03125,
+      "y": 785031.125
+    }, {
+      "heading": 0,
+      "name": "Unit #112",
+      "skill": "Excellent",
+      "type": "M 818",
+      "x": -239908.765625,
+      "y": 785037.375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "MM69 Blue RR Trucks",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #351",
+      "skill": "Excellent",
+      "type": "M978 HEMTT Tanker",
+      "x": -235994.0625,
+      "y": 852236.8125
+    }, {
+      "heading": 0,
+      "name": "Unit #352",
+      "skill": "Excellent",
+      "type": "M 818",
+      "x": -235994.984375,
+      "y": 852245.1875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "MM75 Blue RR Trucks",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #349",
+      "skill": "Excellent",
+      "type": "M978 HEMTT Tanker",
+      "x": -276869.875,
+      "y": 866505.8125
+    }, {
+      "heading": 0,
+      "name": "Unit #350",
+      "skill": "Excellent",
+      "type": "M 818",
+      "x": -276870.78125,
+      "y": 866514.1875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "MM25 Blue RR Trucks",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #347",
+      "skill": "Excellent",
+      "type": "M978 HEMTT Tanker",
+      "x": -286371.3125,
+      "y": 821781.625
+    }, {
+      "heading": 0,
+      "name": "Unit #348",
+      "skill": "Excellent",
+      "type": "M 818",
+      "x": -286372.21875,
+      "y": 821790
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "LM95 Blue RR Trucks",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #345",
+      "skill": "Excellent",
+      "type": "M978 HEMTT Tanker",
+      "x": -287513.1875,
+      "y": 784924.0625
+    }, {
+      "heading": 0,
+      "name": "Unit #346",
+      "skill": "Excellent",
+      "type": "M 818",
+      "x": -287514.09375,
+      "y": 784932.4375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "LM56 Blue RR Trucks",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #343",
+      "skill": "Excellent",
+      "type": "M978 HEMTT Tanker",
+      "x": -286480.03125,
+      "y": 746090.625
+    }, {
+      "heading": 0,
+      "name": "Unit #344",
+      "skill": "Excellent",
+      "type": "M 818",
+      "x": -286480.9375,
+      "y": 746099
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "CTLD_M1097 Avenger_10 (Smitty)",
+    "units": [ {
+      "heading": 4.3132996603333,
+      "name": "Unpacked M1097 Avenger #29",
+      "skill": "Excellent",
+      "type": "M1097 Avenger",
+      "x": -291797.62500002,
+      "y": 616375.93749995
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "CTLD_Leopard1A3_9 (Smitty)",
+    "units": [ {
+      "heading": 2.6258468664606,
+      "name": "Unpacked Leopard1A3 #26",
+      "skill": "Excellent",
+      "type": "Leopard1A3",
+      "x": -292633.37500012,
+      "y": 616434.43750007
+    }, {
+      "heading": 2.7982122737608,
+      "name": "Unpacked Leopard1A3 #27",
+      "skill": "Excellent",
+      "type": "Leopard1A3",
+      "x": -292602.62500013,
+      "y": 616423.00000005
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "CTLD_M1128 Stryker MGS_12 (Smitty)",
+    "units": [ {
+      "heading": 1.6139540692122,
+      "name": "Unpacked M1128 Stryker MGS #35",
+      "skill": "Excellent",
+      "type": "M1128 Stryker MGS",
+      "x": -291070.15625001,
+      "y": 617819.62500012
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "CTLD_M-1 Abrams_48 (Hbomb)",
+    "units": [ {
+      "heading": 4.292434686234,
+      "name": "Unpacked M-1 Abrams #156",
+      "skill": "Excellent",
+      "type": "M-1 Abrams",
+      "x": -317361.15625,
+      "y": 636922.375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "EJ45 Blue RR Trucks #003",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #024",
+      "skill": "Excellent",
+      "type": "M978 HEMTT Tanker",
+      "x": -123761.75,
+      "y": 425673.6875
+    }, {
+      "heading": 0,
+      "name": "Unit #025",
+      "skill": "Excellent",
+      "type": "M 818",
+      "x": -123761.4765625,
+      "y": 425679.9375
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "Dropped Group 52",
+    "units": [ {
+      "heading": 5.4474754151105,
+      "name": "Dropped Soldier M249 #174",
+      "skill": "Excellent",
+      "type": "Soldier M249",
+      "x": -123177.39040141,
+      "y": 425519.86284887
+    }, {
+      "heading": 5.2293738098143,
+      "name": "Dropped Soldier M249 #175",
+      "skill": "Excellent",
+      "type": "Soldier M249",
+      "x": -123189.79684227,
+      "y": 425547.9346688
+    }, {
+      "heading": 2.0943951617841,
+      "name": "Dropped Paratrooper RPG-16 #176",
+      "skill": "Excellent",
+      "type": "Paratrooper RPG-16",
+      "x": -123228.671875,
+      "y": 425549.25
+    }, {
+      "heading": 3.1415927410126,
+      "name": "Dropped Paratrooper RPG-16 #177",
+      "skill": "Excellent",
+      "type": "Paratrooper RPG-16",
+      "x": -123243.671875,
+      "y": 425523.25
+    }, {
+      "heading": 4.1887903042456,
+      "name": "Dropped Paratrooper RPG-16 #178",
+      "skill": "Excellent",
+      "type": "Paratrooper RPG-16",
+      "x": -123228.671875,
+      "y": 425497.28125
+    }, {
+      "heading": 5.2359876565238,
+      "name": "Dropped Paratrooper RPG-16 #179",
+      "skill": "Excellent",
+      "type": "Paratrooper RPG-16",
+      "x": -123198.671875,
+      "y": 425497.28125
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "EJ08 RED RR Trucks #002",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #393",
+      "skill": "Excellent",
+      "type": "Ural-375",
+      "x": -97979.75,
+      "y": 387555.5
+    }, {
+      "heading": 0,
+      "name": "Unit #394",
+      "skill": "Excellent",
+      "type": "ATZ-10",
+      "x": -97980.9609375,
+      "y": 387563.71875
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_UAZ-469_55 (Wildcat)",
+    "units": [ {
+      "heading": 0.82455801153287,
+      "name": "Unpacked UAZ-469 #201",
+      "skill": "Excellent",
+      "type": "UAZ-469",
+      "x": -97291.802655305,
+      "y": 391457.75628415
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_2S6 Tunguska_56 (Wildcat)",
+    "units": [ {
+      "heading": 0.98094935620338,
+      "name": "Unpacked 2S6 Tunguska #203",
+      "skill": "Excellent",
+      "type": "2S6 Tunguska",
+      "x": -97060.731643949,
+      "y": 391333.24007518
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_2S6 Tunguska_57 (Wildcat)",
+    "units": [ {
+      "heading": 0.52179871597429,
+      "name": "Unpacked 2S6 Tunguska #205",
+      "skill": "Excellent",
+      "type": "2S6 Tunguska",
+      "x": -124770.89960717,
+      "y": 422402.00297183
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_Strela-10M3_58 (Wildcat)",
+    "units": [ {
+      "heading": 4.4462338705905,
+      "name": "Unpacked Strela-10M3 #208",
+      "skill": "Excellent",
+      "type": "Strela-10M3",
+      "x": -97969.213700808,
+      "y": 387564.07204366
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_Tor 9A331_60 (Wildcat)",
+    "units": [ {
+      "heading": 0.19962566272344,
+      "name": "Unpacked Tor 9A331 #212",
+      "skill": "Excellent",
+      "type": "Tor 9A331",
+      "x": -120391.32666098,
+      "y": 422758.47200391
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_Strela-10M3_59 (Wildcat)",
+    "units": [ {
+      "heading": 1.7013983252819,
+      "name": "Unpacked Strela-10M3 #210",
+      "skill": "Excellent",
+      "type": "Strela-10M3",
+      "x": -99135.389584309,
+      "y": 392256.22783384
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_Tor 9A331_61 (Wildcat)",
+    "units": [ {
+      "heading": 4.3556067058306,
+      "name": "Unpacked Tor 9A331 #214",
+      "skill": "Excellent",
+      "type": "Tor 9A331",
+      "x": -122584.15457063,
+      "y": 415569.34603526
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_ZSU-23-4 Shilka_63 (Wildcat)",
+    "units": [ {
+      "heading": 6.2820314648972,
+      "name": "Unpacked ZSU-23-4 Shilka #219",
+      "skill": "Excellent",
+      "type": "ZSU-23-4 Shilka",
+      "x": -123303.24188993,
+      "y": 416259.55131084
+    }, {
+      "heading": 0.3487879561657,
+      "name": "Unpacked ZSU-23-4 Shilka #220",
+      "skill": "Excellent",
+      "type": "ZSU-23-4 Shilka",
+      "x": -123330.25441237,
+      "y": 416259.81806482
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_ZSU-23-4 Shilka_62 (Wildcat)",
+    "units": [ {
+      "heading": 1.1334365146713,
+      "name": "Unpacked ZSU-23-4 Shilka #216",
+      "skill": "Excellent",
+      "type": "ZSU-23-4 Shilka",
+      "x": -97847.898437511,
+      "y": 388822.87500001
+    }, {
+      "heading": 4.7136873606698,
+      "name": "Unpacked ZSU-23-4 Shilka #217",
+      "skill": "Excellent",
+      "type": "ZSU-23-4 Shilka",
+      "x": -97948.455253789,
+      "y": 388677.95061842
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_ZBD04A_65 (Wildcat)",
+    "units": [ {
+      "heading": 0.62451369915647,
+      "name": "Unpacked ZBD04A #224",
+      "skill": "Excellent",
+      "type": "ZBD04A",
+      "x": -122184.25801389,
+      "y": 415857.75516025
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_T-72B_64 (Wildcat)",
+    "units": [ {
+      "heading": 1.7442047780007,
+      "name": "Unpacked T-72B #222",
+      "skill": "Excellent",
+      "type": "T-72B",
+      "x": -121578.20489423,
+      "y": 415313.3289491
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_T-72B_67 (Wildcat)",
+    "units": [ {
+      "heading": 2.4929094695156,
+      "name": "Unpacked T-72B #228",
+      "skill": "Excellent",
+      "type": "T-72B",
+      "x": -123066.39055446,
+      "y": 415820.30240445
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_T-72B_66 (Wildcat)",
+    "units": [ {
+      "heading": 4.0013245638593,
+      "name": "Unpacked T-72B #226",
+      "skill": "Excellent",
+      "type": "T-72B",
+      "x": -98068.89094065,
+      "y": 387849.80663957
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_T-72B_68 (Wildcat)",
+    "units": [ {
+      "heading": 2.1032488744188,
+      "name": "Unpacked T-72B #230",
+      "skill": "Excellent",
+      "type": "T-72B",
+      "x": -122265.87084422,
+      "y": 415652.3872655
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_T-72B_70 (Wildcat)",
+    "units": [ {
+      "heading": 3.7630914140201,
+      "name": "Unpacked T-72B #234",
+      "skill": "Excellent",
+      "type": "T-72B",
+      "x": -122629.81270877,
+      "y": 415612.76942635
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_T-72B_69 (Wildcat)",
+    "units": [ {
+      "heading": 0.50536946833048,
+      "name": "Unpacked T-72B #232",
+      "skill": "Excellent",
+      "type": "T-72B",
+      "x": -121861.88204483,
+      "y": 415369.80610669
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "red",
+    "coalitionId": 1,
+    "countryId": 0,
+    "name": "CTLD_T-72B_71 (Wildcat)",
+    "units": [ {
+      "heading": 2.0906383284025,
+      "name": "Unpacked T-72B #236",
+      "skill": "Excellent",
+      "type": "T-72B",
+      "x": -122206.25227906,
+      "y": 415551.1246432
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "GJ22 Blue RR Trucks #002",
+    "units": [ {
+      "heading": 0,
+      "name": "Unit #036",
+      "skill": "Excellent",
+      "type": "M978 HEMTT Tanker",
+      "x": -144356.15625,
+      "y": 608757.4375
+    }, {
+      "heading": 0,
+      "name": "Unit #037",
+      "skill": "Excellent",
+      "type": "M 818",
+      "x": -144355.890625,
+      "y": 608763.75
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "CTLD_Hummer_72 (n0xy)",
+    "units": [ {
+      "heading": 0.058442476028979,
+      "name": "Unpacked Hummer #241",
+      "skill": "Excellent",
+      "type": "Hummer",
+      "x": -146342.44858007,
+      "y": 607609.73549178
+    } ]
+  }, {
+    "category": "vehicle",
+    "coalition": "blue",
+    "coalitionId": 2,
+    "countryId": 2,
+    "name": "CTLD_Hummer_73 (Smitty)",
+    "units": [ {
+      "heading": 0.61947909598453,
+      "name": "Unpacked Hummer #243",
+      "skill": "Excellent",
+      "type": "Hummer",
+      "x": -284877.09374996,
+      "y": 684157.12500003
+    } ]
+  } ]
+}
