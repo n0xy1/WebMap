@@ -1,1 +1,500 @@
-{"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [41.673711289707, 42.189884776736]}, "properties": {"lat": 42.189884776736, "lon": 41.673711289707, "name": "RedBeachhead"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [42.311090842748, 42.487066539186]}, "properties": {"lat": 42.487066539186, "lon": 42.311090842748, "name": "KN70"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [41.610914866864, 42.394890462563]}, "properties": {"lat": 42.394890462563, "lon": 41.610914866864, "name": "GG19"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [42.042073948292, 42.696746443835]}, "properties": {"lat": 42.696746443835, "lon": 42.042073948292, "name": "KN53"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [41.506543013852, 42.717701282862]}, "properties": {"lat": 42.717701282862, "lon": 41.506543013852, "name": "GH03"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [41.658956582156, 43.086651956229]}, "properties": {"lat": 43.086651956229, "lon": 41.658956582156, "name": "GH17"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [42.270013457903, 42.996451516979]}, "properties": {"lat": 42.996451516979, "lon": 42.270013457903, "name": "KN76"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [42.741314714559, 43.044688468064]}, "properties": {"lat": 43.044688468064, "lon": 42.741314714559, "name": "LN16"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [44.171215052833, 42.893914638439]}, "properties": {"lat": 42.893914638439, "lon": 44.171215052833, "name": "MN34"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [43.995536595455, 43.273441889918]}, "properties": {"lat": 43.273441889918, "lon": 43.995536595455, "name": "MN19"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [44.086361529977, 43.732027912115]}, "properties": {"lat": 43.732027912115, "lon": 44.086361529977, "name": "MP24"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [43.347698385785, 43.860881088065]}, "properties": {"lat": 43.860881088065, "lon": 43.347698385785, "name": "LP65"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [43.086173141642, 44.223500561792]}, "properties": {"lat": 44.223500561792, "lon": 43.086173141642, "name": "Mineralnye Vody RSRbaseCaptureZone Airbase"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [42.679982130036, 43.969726394474]}, "properties": {"lat": 43.969726394474, "lon": 42.679982130036, "name": "LP17"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [42.972354939634, 43.434539896805]}, "properties": {"lat": 43.434539896805, "lon": 42.972354939634, "name": "LP31"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [42.230971332866, 43.760529883463]}, "properties": {"lat": 43.760529883463, "lon": 42.230971332866, "name": "KP74"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [41.952634981347, 44.133648568184]}, "properties": {"lat": 44.133648568184, "lon": 41.952634981347, "name": "GJ39"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [41.495572091417, 43.910605598027]}, "properties": {"lat": 43.910605598027, "lon": 41.495572091417, "name": "GJ06"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [41.010280113426, 44.209819308662]}, "properties": {"lat": 44.209819308662, "lon": 41.010280113426, "name": "FJ69"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [39.989754998694, 44.090993774666]}, "properties": {"lat": 44.090993774666, "lon": 39.989754998694, "name": "EJ78"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [40.910544047556, 43.611523329924]}, "properties": {"lat": 43.611523329924, "lon": 40.910544047556, "name": "FJ53"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [39.531989139799, 43.835838569848]}, "properties": {"lat": 43.835838569848, "lon": 39.531989139799, "name": "EJ45"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [39.083726780416, 44.091735429778]}, "properties": {"lat": 44.091735429778, "lon": 39.083726780416, "name": "EJ08"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [39.284365255935, 44.314607492649]}, "properties": {"lat": 44.314607492649, "lon": 39.284365255935, "name": "EK20"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [38.552262550865, 44.412268765953]}, "properties": {"lat": 44.412268765953, "lon": 38.552262550865, "name": "DK61"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [39.188704799599, 44.679954968506]}, "properties": {"lat": 44.679954968506, "lon": 39.188704799599, "name": "EK14"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [36.688537024553, 45.210437469613]}, "properties": {"lat": 45.210437469613, "lon": 36.688537024553, "name": "BlueBeachhead"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [38.559383904158, 44.758304909057]}, "properties": {"lat": 44.758304909057, "lon": 38.559383904158, "name": "DK65"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [40.274044540984, 43.685726124403]}, "properties": {"lat": 43.685726124403, "lon": 40.274044540984, "name": "FJ03"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [42.869155389266, 42.611105858624]}, "properties": {"lat": 42.611105858624, "lon": 42.869155389266, "name": "LN21"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [41.759833448737, 43.499860673074]}, "properties": {"lat": 43.499860673074, "lon": 41.759833448737, "name": "GJ22"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [39.714863536894, 44.382866977341]}, "properties": {"lat": 44.382866977341, "lon": 39.714863536894, "name": "EK51"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [37.346267213517, 44.525151232716]}, "properties": {"lat": 44.525151232716, "lon": 37.346267213517, "name": "BlueStagingPoint"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [41.290139742489, 41.953663741881]}, "properties": {"lat": 41.953663741881, "lon": 41.290139742489, "name": "RedStagingPoint"}}]}
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            41.673711289707,
+            42.189884776736
+          ]
+        },
+        "properties": {
+          "lat": 42.189884776736,
+          "lon": 41.673711289707,
+          "name": "RedBeachhead"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            42.311090842748,
+            42.487066539186
+          ]
+        },
+        "properties": {
+          "lat": 42.487066539186,
+          "lon": 42.311090842748,
+          "name": "KN70"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            41.610914866864,
+            42.394890462563
+          ]
+        },
+        "properties": {
+          "lat": 42.394890462563,
+          "lon": 41.610914866864,
+          "name": "GG19"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            42.042073948292,
+            42.696746443835
+          ]
+        },
+        "properties": {
+          "lat": 42.696746443835,
+          "lon": 42.042073948292,
+          "name": "KN53"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            41.506543013852,
+            42.717701282862
+          ]
+        },
+        "properties": {
+          "lat": 42.717701282862,
+          "lon": 41.506543013852,
+          "name": "GH03"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            41.658956582156,
+            43.086651956229
+          ]
+        },
+        "properties": {
+          "lat": 43.086651956229,
+          "lon": 41.658956582156,
+          "name": "GH17"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            42.270013457903,
+            42.996451516979
+          ]
+        },
+        "properties": {
+          "lat": 42.996451516979,
+          "lon": 42.270013457903,
+          "name": "KN76"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            42.741314714559,
+            43.044688468064
+          ]
+        },
+        "properties": {
+          "lat": 43.044688468064,
+          "lon": 42.741314714559,
+          "name": "LN16"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            44.171215052833,
+            42.893914638439
+          ]
+        },
+        "properties": {
+          "lat": 42.893914638439,
+          "lon": 44.171215052833,
+          "name": "MN34"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            43.995536595455,
+            43.273441889918
+          ]
+        },
+        "properties": {
+          "lat": 43.273441889918,
+          "lon": 43.995536595455,
+          "name": "MN19"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            44.086361529977,
+            43.732027912115
+          ]
+        },
+        "properties": {
+          "lat": 43.732027912115,
+          "lon": 44.086361529977,
+          "name": "MP24"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            43.347698385785,
+            43.860881088065
+          ]
+        },
+        "properties": {
+          "lat": 43.860881088065,
+          "lon": 43.347698385785,
+          "name": "LP65"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            42.679982130036,
+            43.969726394474
+          ]
+        },
+        "properties": {
+          "lat": 43.969726394474,
+          "lon": 42.679982130036,
+          "name": "LP17"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            42.972354939634,
+            43.434539896805
+          ]
+        },
+        "properties": {
+          "lat": 43.434539896805,
+          "lon": 42.972354939634,
+          "name": "LP31"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            42.230971332866,
+            43.760529883463
+          ]
+        },
+        "properties": {
+          "lat": 43.760529883463,
+          "lon": 42.230971332866,
+          "name": "KP74"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            41.952634981347,
+            44.133648568184
+          ]
+        },
+        "properties": {
+          "lat": 44.133648568184,
+          "lon": 41.952634981347,
+          "name": "GJ39"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            41.495572091417,
+            43.910605598027
+          ]
+        },
+        "properties": {
+          "lat": 43.910605598027,
+          "lon": 41.495572091417,
+          "name": "GJ06"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            41.010280113426,
+            44.209819308662
+          ]
+        },
+        "properties": {
+          "lat": 44.209819308662,
+          "lon": 41.010280113426,
+          "name": "FJ69"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            39.989754998694,
+            44.090993774666
+          ]
+        },
+        "properties": {
+          "lat": 44.090993774666,
+          "lon": 39.989754998694,
+          "name": "EJ78"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            40.910544047556,
+            43.611523329924
+          ]
+        },
+        "properties": {
+          "lat": 43.611523329924,
+          "lon": 40.910544047556,
+          "name": "FJ53"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            39.531989139799,
+            43.835838569848
+          ]
+        },
+        "properties": {
+          "lat": 43.835838569848,
+          "lon": 39.531989139799,
+          "name": "EJ45"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            39.083726780416,
+            44.091735429778
+          ]
+        },
+        "properties": {
+          "lat": 44.091735429778,
+          "lon": 39.083726780416,
+          "name": "EJ08"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            39.284365255935,
+            44.314607492649
+          ]
+        },
+        "properties": {
+          "lat": 44.314607492649,
+          "lon": 39.284365255935,
+          "name": "EK20"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            38.552262550865,
+            44.412268765953
+          ]
+        },
+        "properties": {
+          "lat": 44.412268765953,
+          "lon": 38.552262550865,
+          "name": "DK61"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            39.188704799599,
+            44.679954968506
+          ]
+        },
+        "properties": {
+          "lat": 44.679954968506,
+          "lon": 39.188704799599,
+          "name": "EK14"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            36.688537024553,
+            45.210437469613
+          ]
+        },
+        "properties": {
+          "lat": 45.210437469613,
+          "lon": 36.688537024553,
+          "name": "BlueBeachhead"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            38.559383904158,
+            44.758304909057
+          ]
+        },
+        "properties": {
+          "lat": 44.758304909057,
+          "lon": 38.559383904158,
+          "name": "DK65"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            40.274044540984,
+            43.685726124403
+          ]
+        },
+        "properties": {
+          "lat": 43.685726124403,
+          "lon": 40.274044540984,
+          "name": "FJ03"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            42.869155389266,
+            42.611105858624
+          ]
+        },
+        "properties": {
+          "lat": 42.611105858624,
+          "lon": 42.869155389266,
+          "name": "LN21"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            41.759833448737,
+            43.499860673074
+          ]
+        },
+        "properties": {
+          "lat": 43.499860673074,
+          "lon": 41.759833448737,
+          "name": "GJ22"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            39.714863536894,
+            44.382866977341
+          ]
+        },
+        "properties": {
+          "lat": 44.382866977341,
+          "lon": 39.714863536894,
+          "name": "EK51"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            37.346267213517,
+            44.525151232716
+          ]
+        },
+        "properties": {
+          "lat": 44.525151232716,
+          "lon": 37.346267213517,
+          "name": "BlueStagingPoint"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            41.290139742489,
+            41.953663741881
+          ]
+        },
+        "properties": {
+          "lat": 41.953663741881,
+          "lon": 41.290139742489,
+          "name": "RedStagingPoint"
+        }
+      }
+    ]
+  }
