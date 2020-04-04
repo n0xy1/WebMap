@@ -24,7 +24,7 @@
         color: #2f2f2f;
         }
         #controlbox { position: absolute; top: 10px; left: 10px; z-index: 99; border-radius:27px; -moz-border-radius:27px; -webkit-border-radius:27px;}
-
+        #playerbox { position:absolute; height:300px; bottom:0px; right:25%; left:50%; margin-left:-50%;}
     </style>
 </head>
 <body>
@@ -285,9 +285,12 @@
 
 </script>
 <div id="controlbox">
-    <nav class="uk-navbar-container uk-margin uk-navbar-transparent" uk-navbar>
+    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
         <div class="uk-navbar-left">
-            <a href="#offcanvas-nav-primary" uk-toggle>Menu</a>
+        <ul class="uk-navbar-nav uk-text-bolder uk-text-large ">
+            <li ><a class="uk-text-danger" href="#offcanvas-nav-primary" uk-toggle></span>INFO</a></li>
+            <li><a class="uk-text-danger" href="#offcanvas-flip" uk-toggle>Player List</a></li>
+        </ul>
         </div>
     </nav>
 </div>
@@ -314,5 +317,47 @@
         </ul>
 
     </div>
+</div>
+<script>
+var $element = $('#my-id');
+$(document).on('beforeshow', $element, function() {
+    document.getElementById('blueteam').innerHTML = ""
+    document.getElementById('redteam').innerHTML=""
+    
+  $.getJSON('http://walsh.systems:9595/api/v1/players/blue/', function(data) {
+        var i;
+        for (i=0; i < data.length; i++){
+            document.getElementById('blueteam').innerHTML += data[i].Name + '<br>';
+        }
+    });
+    $.getJSON('http://walsh.systems:9595/api/v1/players/red/', function(data) {
+        var i;
+        for (i=0; i < data.length; i++){
+            document.getElementById('redteam').innerHTML += data[i].Name + '<br>';
+        }
+    });
+})
+</script>
+
+<div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+        <ul class="uk-tab" data-uk-tab="{connect:'#my-id'}">
+            <li><a href="">Blue</a></li>
+            <li><a href="">Red</a></li>
+            <li><a href="">Spec</a></li>
+        </ul>
+        <ul id="my-id" class="uk-switcher">
+            <li id="blueteam"> BLUE TEAM HERE <a href="" data-uk-switcher-item="0">...</a></li>
+            <li id="redteam"> RED TEAM HERE <a href="" data-uk-switcher-item="1">...</a></li>
+            <li> Still working on this :) <a href="" data-uk-switcher-item="2">...</a></li>
+        </ul>
+        </div>
+    </div>
+</div>
+
+    
 </div>
 </body></html>
