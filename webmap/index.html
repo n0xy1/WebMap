@@ -283,6 +283,8 @@
         });
     });
 
+    
+
 </script>
 <div id="controlbox">
     <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
@@ -296,68 +298,156 @@
 </div>
  
 <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
-    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
-        <img src="img/logo.png">
-        <ul class="uk-nav uk-nav-primary uk-margin-auto-vertical">
-            <li><a href="https://discord.gg/AptRj9p"><span class="uk-margin-small-right" uk-icon="icon: commenting"></span> Discord Link</a></li>
-            <li class="uk-nav-divider"></li>
-            <li>Server: redstormrising.ddns.net:10308</li>
-            <li>SRS: redstormrising.ddns.net:5002</li>
-            <li class="uk-nav-divider"></li>
-            <li>ATC: 250.000</li>
-            <li>GCI-Package: 125.000</li>
-            <li>AWACS Krasnodar (Wizard): 252.000</li>
-            <li>AWACS Vaziani (Darkstar): 253.000</li>
-            <li>AWACS Carrier (Overload): 231.000</li>
-            <li>EWR: 124.000</li>
-            <li class="uk-nav-divider"></li>
-            <li>Carrier Stennis1: TACAN 41X ICLS 21</li>
-            <li>Carrier Stennis2: TACAN 42X ICLS 22</li>
-            <li>Carrier Tarawa: TACAN 43X ICLS 23</li>
-        </ul>
-
-    </div>
+    <div class="uk-offcanvas-bar">
+                <img src="img/logo.png">
+                <p>
+                    <a href="https://discord.gg/AptRj9p"><span class="uk-margin-small-right" uk-icon="icon: commenting"></span> Discord Link</a>
+                </p>
+                <p> 
+                    Server: redstormrising.ddns.net:10308
+                    SRS: redstormrising.ddns.net:5002
+                </p>
+                <p>
+                    <button class="uk-button uk-button-primary uk-width-1-1" type="button" uk-toggle="target: #modal-close-default-blue">Blue Comms Info</button>
+                    <button class="uk-button uk-button-primary uk-width-1-1" type="button" uk-toggle="target: #modal-close-default-red">Red Comms Info</button>
+                    <button class="uk-button uk-button-primary uk-width-1-1" href="#offcanvas-flip" uk-toggle>Show Player List</button>
+                </p>
+     </div>
 </div>
 <script>
 var $element = $('#my-id');
 $(document).on('beforeshow', $element, function() {
-    document.getElementById('blueteam').innerHTML = ""
-    document.getElementById('redteam').innerHTML=""
+    document.getElementById('blueteam').innerHTML = '<ul class="uk-list uk-list-striped">'
+    document.getElementById('redteam').innerHTML= '<ul class="uk-list uk-list-striped">'
     
   $.getJSON('http://walsh.systems:9595/api/v1/players/blue/', function(data) {
         var i;
         for (i=0; i < data.length; i++){
-            document.getElementById('blueteam').innerHTML += data[i].Name + '<br>';
+            document.getElementById('blueteam').innerHTML += '<li>' +data[i].Name + '</li>';
         }
+        document.getElementById('bluecount').innerHTML = data.length;
     });
     $.getJSON('http://walsh.systems:9595/api/v1/players/red/', function(data) {
         var i;
         for (i=0; i < data.length; i++){
-            document.getElementById('redteam').innerHTML += data[i].Name + '<br>';
+            document.getElementById('redteam').innerHTML += '<li>' +data[i].Name + '</li>';
         }
+        document.getElementById('redcount').innerHTML = data.length;
     });
+    document.getElementById('blueteam').innerHTML += '</ul>'
+    document.getElementById('redteam').innerHTML += '</ul>'
 })
 </script>
 
-<div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
+<div id="offcanvas-flip" uk-offcanvas="flip: true;">
     <div class="uk-offcanvas-bar">
-
         <button class="uk-offcanvas-close" type="button" uk-close></button>
 
-        <ul class="uk-tab" data-uk-tab="{connect:'#my-id'}">
-            <li><a href="">Blue</a></li>
-            <li><a href="">Red</a></li>
-            <li><a href="">Spec</a></li>
+        <ul uk-accordion>
+            <li class="uk-open">
+                <a class="uk-accordion-title" href="#">Blue Team</a>
+                <div class="uk-accordion-content" id="blueteam">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </li>
+            <li class="uk-open">
+                <a class="uk-accordion-title" href="#">Red Team</a>
+                <div class="uk-accordion-content" id="redteam">
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit.</p>
+                </div>
+            </li>
+            <li>
+                <a class="uk-accordion-title" href="#">Spectators</a>
+                <div class="uk-accordion-content">
+                    <p>not ready :)</p>
+                </div>
+            </li>
         </ul>
-        <ul id="my-id" class="uk-switcher">
-            <li id="blueteam"> BLUE TEAM HERE <a href="" data-uk-switcher-item="0">...</a></li>
-            <li id="redteam"> RED TEAM HERE <a href="" data-uk-switcher-item="1">...</a></li>
-            <li> Still working on this :) <a href="" data-uk-switcher-item="2">...</a></li>
-        </ul>
+
         </div>
     </div>
 </div>
 
+<!-- This is the modal with the default close button -->
+<div id="modal-close-default-blue" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <h2 class="uk-modal-title">Blue Side Info</h2>
+        <table class="uk-table uk-table-striped uk-text-small uk-text-nowrap">
+            <thead>
+                <tr>
+                    <th>Comms Channels</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ATC: 250.000<br>
+                        GCI: 125.000</td>
+                </tr>
+                <tr>
+                    <td>EWRs: 124.000<br>
+                        E-2D AWACS Krasnodar [North AO] (Wizard): 252.000<br>
+                        E-2D AWACS Vaziani [South AO] (Darkstar): 253.000<br>
+                        E-2D AWACS Carrier [West AO] (Overlord): 251.000<br>
+                        KC-135 Tanker Carrier [West AO] (Texaco): 254.000, TACAN: 04X<br><br>
+                        
+                        NOTE: SRS can be used on the AWACS frequency for that Area of Operations (AO)</td>
+                </tr>
+                <tr>
+                    <td>BRC: ?<br>
+                        Blue Carrier Group2-1 Stennis (STN): TACAN: 41X, ICLS: 01, 101.00 AM<br>
+                        Blue Carrier Group2-2 Stennis (TOM): TACAN: 42X, ICLS: 02, 102.00 AM<br>
+                        Blue Carrier Group2-3 Tarawa (TAR): TACAN: 43X, ICLS: 03, 103.00 AM<br>
+                    </td>
+                </tr>
+            </tbody>
+        </table>    </div>
+</div>
+
+<div id="modal-close-default-red" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <h2 class="uk-modal-title">Red Side Info</h2>
+        <table class="uk-table uk-table-striped uk-text-small uk-text-nowrap">
+            <thead>
+                <tr>
+                    <th>Comms Channels</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ATC: 250.000<br>
+                        GCI: 125.000</td>
+                </tr>
+                <tr>
+                    <td>EWRs: 124.000 (ch0)<br>
+                        E-3A AWACS Krasnodar [North-West AO] (Wizard): 122.000<br>
+                        E-3A AWACS Vaziani [South-East AO] (Darkstar): 123.000<br>
+                        E-3A AWACS Carrier [South AO] (Overlord): 121.000<br>
+                        KC-135 Tanker Carrier [South AO] (Shell): 120.000, TACAN: 08X<br>
+                        
+                        NOTE: SRS can be used on the AWACS frequency for that Area of Operations (AO)</td>
+                </tr>
+                <tr>
+                    <td>BRC: ?<br>
+                        Red Carrier Group1-2 Kuznetsov: Freq: 102.00 AM<br>
+                        Red Carrier Group1-5 Stennis (STR): TACAN: 35X, ICLS: 05, Freq: 105.00 AM<br>
+                        Red Carrier Group1-6 Tarawa (TRW): TACAN: 36X, ICLS: 06, Freq: 106.00 AM<br>
+                        Red Carrier Group1-7 Tarawa (TKR): TACAN: 37X, ICLS: 07, Freq: 107.00 AM<br>
+                    </td>
+                </tr>
+            </tbody>
+        </table>    </div>
+</div>         
+
     
 </div>
-</body></html>
+</body>
+<script>
+    
+    window.addEventListener("load", function(){
+        UIkit.offcanvas('#offcanvas-nav-primary').toggle();
+    });
+
+</script>
+</html>
