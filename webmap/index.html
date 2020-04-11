@@ -1,21 +1,21 @@
-<html><head>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>RSR - Live Map</title>
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.6.0/mapbox-gl.js"></script>
-    <script src="js/jquery-3.4.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="css/uikit.min.css" />
-    <script src="js/uikit.min.js"></script>
-    <script src="js/uikit-icons.min.js"></script>
-
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Mapbox -->
     <link rel="icon" href="//img1.wsimg.com/isteam/ip/d837f339-0c70-45ad-8c5c-4614e8fe41cf/favicon/a71a660b-037f-45e6-b5bc-8bbbb4f12562.png/:/rs=w:64,h:64,m" sizes="64x64">
-    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css" rel="stylesheet">
-    <style>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />   
+    <script src="js/map.js"></script>
+    <style>        
         body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
         #map canvas {cursor: crosshair;}
-
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
         .mapboxgl-popup {
         max-width: 400px;
         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -23,431 +23,652 @@
         .mapboxgl-popup-content {
         color: #2f2f2f;
         }
-        #controlbox { position: absolute; top: 10px; left: 10px; z-index: 99; border-radius:27px; -moz-border-radius:27px; -webkit-border-radius:27px;}
-        #playerbox { position:absolute; height:300px; bottom:0px; right:25%; left:50%; margin-left:-50%;}
+        
+        .nopadding {
+        padding: 0 !important;
+        margin: 0 !important;
+        }
+        .distance-container {
+        position: absolute;
+        bottom: 100px;
+        left: 10px;
+        z-index: 1;
+        }
+        .distance-container > * {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-size: 11px;
+        line-height: 18px;
+        display: block;
+        margin: 0;
+        padding: 5px 10px;
+        border-radius: 3px;
+        }
+        #coord-info {
+        display: block;
+        position: absolute;
+        margin: 0px auto;
+        bottom: 30px;
+        left: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        font-size: 12px;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+        }
     </style>
-</head>
-<body>
-<canvas id="canvasID" width="400" height="400"><img src="logo.png"></canvas>
-<div id="map" class="mapboxgl-map"><div class="mapboxgl-canary" style="visibility: hidden;"></div><div class="mapboxgl-canvas-container mapboxgl-interactive mapboxgl-touch-drag-pan mapboxgl-touch-zoom-rotate"><canvas class="mapboxgl-canvas" tabindex="0" aria-label="Map" width="635" height="888" style="position: absolute; width: 635px; height: 888px;"></canvas></div><div class="mapboxgl-control-container"><div class="mapboxgl-ctrl-top-left"></div><div class="mapboxgl-ctrl-top-right"></div><div class="mapboxgl-ctrl-bottom-left"><div class="mapboxgl-ctrl" style="display: block;"><a class="mapboxgl-ctrl-logo" target="_blank" rel="noopener nofollow" href="https://www.mapbox.com/" aria-label="Mapbox logo"></a></div></div><div class="mapboxgl-ctrl-bottom-right"><div class="mapboxgl-ctrl mapboxgl-ctrl-attrib mapboxgl-compact"><div class="mapboxgl-ctrl-attrib-inner"><a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox</a> <a href="http://www.openstreetmap.org/about/" target="_blank">© OpenStreetMap</a> <a class="mapbox-improve-map" href="https://apps.mapbox.com/feedback/?owner=mapbox&amp;id=dark-v10&amp;access_token=pk.eyJ1IjoiZW5naW5lMDc1NSIsImEiOiJjazMyY2NiNnkwaWpjM21wbXplcmk5azh5In0.XoHRgaAQgpCbLaqcBru51g" target="_blank" rel="noopener nofollow">Improve this map</a></div></div></div></div></div>
-
-<script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiZW5naW5lMDc1NSIsImEiOiJjazMyY2NiNnkwaWpjM21wbXplcmk5azh5In0.XoHRgaAQgpCbLaqcBru51g';
-    var bounds = [
-        [35.580307, 39.103504], // Southwest coordinates
-        [48.030353, 46.359388]  // Northeast coordinates
-    ];
-
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/dark-v10',
-        center: [40.392174,43.503044],
-        zoom: 6.8,
-
-    });
-
-    var size = 200;
-
-    var pulsingDot = {
-        width: size,
-        height: size,
-        data: new Uint8Array(size * size * 4),
-
-        // get rendering context for the map canvas when layer is added to the map
-        onAdd: function() {
-            var canvas = document.createElement('canvas');
-            canvas.width = this.width;
-            canvas.height = this.height;
-            this.context = canvas.getContext('2d');
-        },
-
-        // called once before every frame where the icon will be used
-        render: function() {
-            var duration = 1000;
-            var t = (performance.now() % duration) / duration;
-
-            var radius = size / 4 * 0.3;
-            var outerRadius = size / 4 * 0.7 * t + radius;
-            var context = this.context;
-
-            // draw outer circle
-            context.clearRect(0, 0, this.width, this.height);
-            context.beginPath();
-            context.arc(this.width / 2, this.height / 2, outerRadius, 0, Math.PI * 2);
-            context.fillStyle = 'rgba(255, 200, 200,' + (1 - t) + ')';
-            context.fill();
-
-            // draw inner circle
-            context.beginPath();
-            context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
-            context.fillStyle = 'rgba(255, 100, 100, 1)';
-            context.strokeStyle = 'white';
-            context.lineWidth = 2 + 4 * (1 - t);
-            context.fill();
-            context.stroke();
-
-            // update this image's data with data from the canvas
-            this.data = context.getImageData(0, 0, this.width, this.height).data;
-            // continuously repaint the map, resulting in the smooth animation of the dot
-            map.triggerRepaint();
-            // return `true` to let the map know that the image was updated
-            return true;
-        }
-    };
-
-    var pulsingDot1 = {
-        width: size,
-        height: size,
-        data: new Uint8Array(size * size * 4),
-        // get rendering context for the map canvas when layer is added to the map
-        onAdd: function() {
-            var canvas = document.createElement('canvas');
-            canvas.width = this.width;
-            canvas.height = this.height;
-            this.context = canvas.getContext('2d');
-        },
-        // called once before every frame where the icon will be used
-        render: function() {
-            var duration = 1000;
-            var t = (performance.now() % duration) / duration;
-            var radius = size / 4 * 0.3;
-            var outerRadius = size / 4 * 0.7 * t + radius;
-            var context = this.context;
-            // draw outer circle
-            context.clearRect(0, 0, this.width, this.height);
-            context.beginPath();
-            context.arc(this.width / 2, this.height / 2, outerRadius, 0, Math.PI * 2);
-            context.fillStyle = 'rgba(65, 105, 225,' + (1 - t) + ')';
-            context.fill();
-            // draw inner circle
-            context.beginPath();
-            context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
-            context.fillStyle = 'rgba(65, 105, 225, 1)';
-            context.strokeStyle = 'white';
-            context.lineWidth = 2 + 4 * (1 - t);
-            context.fill();
-            context.stroke();
-            // update this image's data with data from the canvas
-            this.data = context.getImageData(0, 0, this.width, this.height).data;
-            // continuously repaint the map, resulting in the smooth animation of the dot
-            map.triggerRepaint();
-            // return `true` to let the map know that the image was updated
-            return true;
-        }
-    };
-
-    var pulsingDot2 = {
-        width: size,
-        height: size,
-        data: new Uint8Array(size * size * 4),
-        // get rendering context for the map canvas when layer is added to the map
-        onAdd: function() {
-            var canvas = document.createElement('canvas');
-            canvas.width = this.width;
-            canvas.height = this.height;
-            this.context = canvas.getContext('2d');
-        },
-        // called once before every frame where the icon will be used
-        render: function() {
-            var duration = 1000;
-            var t = (performance.now() % duration) / duration;
-            var radius = size / 4 * 0.3;
-            var outerRadius = size / 4 * 0.7 * t + radius;
-            var context = this.context;
-            // draw outer circle
-            context.clearRect(0, 0, this.width, this.height);
-            context.beginPath();
-            context.arc(this.width / 2, this.height / 2, outerRadius, 0, Math.PI * 2);
-            context.fillStyle = 'rgba(200, 255, 200,' + (1 - t) + ')';
-            context.fill();
-            // draw inner circle
-            context.beginPath();
-            context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
-            context.fillStyle = 'rgba(100, 255, 100, 1)';
-            context.strokeStyle = 'white';
-            context.lineWidth = 2 + 4 * (1 - t);
-            context.fill();
-            context.stroke();
-            // update this image's data with data from the canvas
-            this.data = context.getImageData(0, 0, this.width, this.height).data;
-            // continuously repaint the map, resulting in the smooth animation of the dot
-            map.triggerRepaint();
-            // return `true` to let the map know that the image was updated
-            return true;
-        }
-    };
-
-    var farpdot = {
-        width: size,
-        height: size,
-        data: new Uint8Array(size * size * 4),
-        // get rendering context for the map canvas when layer is added to the map
-        onAdd: function() {
-            var canvas = document.createElement('canvas');
-            canvas.width = this.width;
-            canvas.height = this.height;
-            this.context = canvas.getContext('2d');
-        },
-        // called once before every frame where the icon will be used
-        render: function() {
-            var duration = 1000;
-            var t = (performance.now() % duration) / duration;
-            var radius = size / 4 * 0.3;
-            var outerRadius = size / 4 * 0.7 * t + radius;
-            var context = this.context;
-            // draw inner circle
-            context.beginPath();
-            context.rect(this.width / 2, this.height / 2, 12, 12);
-            context.fillStyle = 'rgba(150, 000, 150, 1)';
-            context.strokeStyle = 'black';
-            context.lineWidth = 4;
-            context.fill();
-            context.stroke();
-            // update this image's data with data from the canvas
-            this.data = context.getImageData(0, 0, this.width, this.height).data;
-            // continuously repaint the map, resulting in the smooth animation of the dot
-            map.triggerRepaint();
-            // return `true` to let the map know that the image was updated
-            return true;
-        }
-    };
-   
-
-    function buildFilter(arr) {
-    var filter = ['in', 'baseName'];
-    if (arr.length === 0) {
-        return filter;
-    }
-    for(var i = 0; i < arr.length; i += 1) {
-        filter.push(arr[i]);
-    }
-    return filter;
-}
-
-
-    map.on('load', function () {
-        map.addImage('pulsing-dot', pulsingDot, { pixelRatio: 2 });
-        map.addImage('pulsing-dot1', pulsingDot1, { pixelRatio: 2 });
-        map.addImage('pulsing-dot2', pulsingDot2, { pixelRatio: 2 });
-        map.addImage('farpdot',farpdot,{pixelRatio: 2});
-        var url = "link/rsrState.json";
-        $.getJSON(url, dataReady);
-        function dataReady( data ) {
-        var blueBaseFilter = buildFilter(data.baseOwnership.Airbases.blue)
-        var redBaseFilter = buildFilter(data.baseOwnership.Airbases.red)
-        console.log(blueBaseFilter)
-        console.log(redBaseFilter)
-        var url = 'geo/geolocs.json';
-        var url2 = 'geo/farplocs.json';
-        //airbases
-        map.addSource('geolocs', { type: 'geojson', data: url });
-        map.addLayer({'id': 'blue-airbases','type': 'symbol','source': 'geolocs', "filter":blueBaseFilter,"layout":{"icon-image":"pulsing-dot1","icon-allow-overlap":true,"icon-ignore-placement":true,"text-allow-overlap":true,"text-field":["format",["upcase",["get","cap"]],{"font-scale":0.8},"\n",{},["downcase",["get","uncap"]],{"font-scale":0.6}],"text-font":["Open Sans Semibold","Arial Unicode MS Bold"],"text-offset":[0,0.6],"text-anchor":"top"}});
-        map.addLayer({'id': 'red-airbases','type': 'symbol','source': 'geolocs', "filter":redBaseFilter,"layout":{"icon-image":"pulsing-dot","icon-allow-overlap":true,"icon-ignore-placement":true,"text-allow-overlap":true,"text-field":["format",["upcase",["get","cap"]],{"font-scale":0.8},"\n",{},["downcase",["get","uncap"]],{"font-scale":0.6}],"text-font":["Open Sans Semibold","Arial Unicode MS Bold"],"text-offset":[0,0.6],"text-anchor":"top"}});
-        map.addLayer({'id': 'neutral-airbases','type': 'symbol','source': 'geolocs',"filter": ["==","side","n"] ,"layout":{"icon-image":"pulsing-dot2","icon-allow-overlap":true,"icon-ignore-placement":true,"text-allow-overlap":true,"text-field":["format",["upcase",["get","cap"]],{"font-scale":0.8},"\n",{},["downcase",["get","uncap"]],{"font-scale":0.6}],"text-font":["Open Sans Semibold","Arial Unicode MS Bold"],"text-offset":[0,0.6],"text-anchor":"top"}});
-        //farps
-        map.addSource('farplocs', { type: 'geojson', data: url2});
-        map.addLayer({'id': 'farps',type:'symbol','source':'farplocs',"layout":{"icon-image":"farpdot","icon-allow-overlap":true,"icon-ignore-placement":true,"text-allow-overlap":true,"text-field":["format",["upcase",["get","cap"]],{"font-scale":0.8},"\n",{},["downcase",["get","uncap"]],{"font-scale":0.6}],"text-font":["Open Sans Semibold","Arial Unicode MS Bold"],"text-offset":[0,0.6],"text-anchor":"top"}});
-        map.removeLayer("place-city-lg-n");
-        map.removeLayer("place-city-lg-s");
-        map.removeLayer("place-city-md-n");
-        map.removeLayer("place-city-md-s");
-        map.removeLayer("place-city-sm");
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <!-- map -->
+    <div id='map'></div>
+    <div id="distance" class="distance-container"></div>
+    <pre id="coord-info"></pre>
+    <script src="https://npmcdn.com/@turf/turf@5.1.6/turf.min.js"></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZW5naW5lMDc1NSIsImEiOiJjazMyY2NiNnkwaWpjM21wbXplcmk5azh5In0.XoHRgaAQgpCbLaqcBru51g';
+        var bounds = [
+            [35.580307, 39.103504], // Southwest coordinates
+            [48.030353, 46.359388]  // Northeast coordinates
+        ];
+    
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/dark-v10',
+            center: [40.392174,43.503044],
+            zoom: 6.8,
+    
+        });
+    
+        var size = 200;
+    
+        var pulsingDot = {
+            width: size,
+            height: size,
+            data: new Uint8Array(size * size * 4),
+    
+            // get rendering context for the map canvas when layer is added to the map
+            onAdd: function() {
+                var canvas = document.createElement('canvas');
+                canvas.width = this.width;
+                canvas.height = this.height;
+                this.context = canvas.getContext('2d');
+            },
+    
+            // called once before every frame where the icon will be used
+            render: function() {
+                var duration = 1000;
+                var t = (performance.now() % duration) / duration;
+    
+                var radius = size / 4 * 0.3;
+                var outerRadius = size / 4 * 0.7 * t + radius;
+                var context = this.context;
+    
+                // draw outer circle
+                context.clearRect(0, 0, this.width, this.height);
+                context.beginPath();
+                context.arc(this.width / 2, this.height / 2, outerRadius, 0, Math.PI * 2);
+                context.fillStyle = 'rgba(255, 200, 200,' + (1 - t) + ')';
+                context.fill();
+    
+                // draw inner circle
+                context.beginPath();
+                context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
+                context.fillStyle = 'rgba(255, 100, 100, 1)';
+                context.strokeStyle = 'white';
+                context.lineWidth = 2 + 4 * (1 - t);
+                context.fill();
+                context.stroke();
+    
+                // update this image's data with data from the canvas
+                this.data = context.getImageData(0, 0, this.width, this.height).data;
+                // continuously repaint the map, resulting in the smooth animation of the dot
+                map.triggerRepaint();
+                // return `true` to let the map know that the image was updated
+                return true;
+            }
+        };
+    
+        var pulsingDot1 = {
+            width: size,
+            height: size,
+            data: new Uint8Array(size * size * 4),
+            // get rendering context for the map canvas when layer is added to the map
+            onAdd: function() {
+                var canvas = document.createElement('canvas');
+                canvas.width = this.width;
+                canvas.height = this.height;
+                this.context = canvas.getContext('2d');
+            },
+            // called once before every frame where the icon will be used
+            render: function() {
+                var duration = 1000;
+                var t = (performance.now() % duration) / duration;
+                var radius = size / 4 * 0.3;
+                var outerRadius = size / 4 * 0.7 * t + radius;
+                var context = this.context;
+                // draw outer circle
+                context.clearRect(0, 0, this.width, this.height);
+                context.beginPath();
+                context.arc(this.width / 2, this.height / 2, outerRadius, 0, Math.PI * 2);
+                context.fillStyle = 'rgba(65, 105, 225,' + (1 - t) + ')';
+                context.fill();
+                // draw inner circle
+                context.beginPath();
+                context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
+                context.fillStyle = 'rgba(65, 105, 225, 1)';
+                context.strokeStyle = 'white';
+                context.lineWidth = 2 + 4 * (1 - t);
+                context.fill();
+                context.stroke();
+                // update this image's data with data from the canvas
+                this.data = context.getImageData(0, 0, this.width, this.height).data;
+                // continuously repaint the map, resulting in the smooth animation of the dot
+                map.triggerRepaint();
+                // return `true` to let the map know that the image was updated
+                return true;
+            }
+        };
+    
+        var pulsingDot2 = {
+            width: size,
+            height: size,
+            data: new Uint8Array(size * size * 4),
+            // get rendering context for the map canvas when layer is added to the map
+            onAdd: function() {
+                var canvas = document.createElement('canvas');
+                canvas.width = this.width;
+                canvas.height = this.height;
+                this.context = canvas.getContext('2d');
+            },
+            // called once before every frame where the icon will be used
+            render: function() {
+                var duration = 1000;
+                var t = (performance.now() % duration) / duration;
+                var radius = size / 4 * 0.3;
+                var outerRadius = size / 4 * 0.7 * t + radius;
+                var context = this.context;
+                // draw outer circle
+                context.clearRect(0, 0, this.width, this.height);
+                context.beginPath();
+                context.arc(this.width / 2, this.height / 2, outerRadius, 0, Math.PI * 2);
+                context.fillStyle = 'rgba(200, 255, 200,' + (1 - t) + ')';
+                context.fill();
+                // draw inner circle
+                context.beginPath();
+                context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
+                context.fillStyle = 'rgba(100, 255, 100, 1)';
+                context.strokeStyle = 'white';
+                context.lineWidth = 2 + 4 * (1 - t);
+                context.fill();
+                context.stroke();
+                // update this image's data with data from the canvas
+                this.data = context.getImageData(0, 0, this.width, this.height).data;
+                // continuously repaint the map, resulting in the smooth animation of the dot
+                map.triggerRepaint();
+                // return `true` to let the map know that the image was updated
+                return true;
+            }
+        };
+    
+        var farpdot = {
+            width: size,
+            height: size,
+            data: new Uint8Array(size * size * 4),
+            // get rendering context for the map canvas when layer is added to the map
+            onAdd: function() {
+                var canvas = document.createElement('canvas');
+                canvas.width = this.width;
+                canvas.height = this.height;
+                this.context = canvas.getContext('2d');
+            },
+            // called once before every frame where the icon will be used
+            render: function() {
+                var duration = 1000;
+                var t = (performance.now() % duration) / duration;
+                var radius = size / 4 * 0.3;
+                var outerRadius = size / 4 * 0.7 * t + radius;
+                var context = this.context;
+                // draw inner circle
+                context.beginPath();
+                context.rect(this.width / 2, this.height / 2, 12, 12);
+                context.fillStyle = 'rgba(150, 000, 150, 1)';
+                context.strokeStyle = 'black';
+                context.lineWidth = 4;
+                context.fill();
+                context.stroke();
+                // update this image's data with data from the canvas
+                this.data = context.getImageData(0, 0, this.width, this.height).data;
+                // continuously repaint the map, resulting in the smooth animation of the dot
+                map.triggerRepaint();
+                // return `true` to let the map know that the image was updated
+                return true;
+            }
+        };
+       
+        var distanceContainer = document.getElementById('distance');
+ 
+        // GeoJSON object to hold our measurement features
+        var geoPoints = {
+        'type': 'FeatureCollection',
+        'features': []
         };
         
-        // Create a popup, but don't add it to the map yet.
-        var popup = new mapboxgl.Popup({
-        closeButton: false,
-        closeOnClick: false
-        });
-        map.on('mouseenter', 'neutral-airbases', function(e) {
-        // Change the cursor style as a UI indicator.
-        map.getCanvas().style.cursor = 'pointer';
-        var coordinates = e.features[0].geometry.coordinates.slice();
-        var description = e.features[0].properties.baseName;
-        // Ensure that if the map is zoomed out such that multiple
-        // copies of the feature are visible, the popup appears
-        // over the copy being pointed to.
-        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        // Used to draw a line between points
+        var linestring = {
+        'type': 'Feature',
+        'geometry': {
+        'type': 'LineString',
+        'coordinates': []
         }
-        // Populate the popup and set its coordinates
-        // based on the feature found.
-        popup
-        .setLngLat(coordinates)
-        .setHTML(description)
-        .addTo(map);
-        });
-        map.on('mouseleave', 'neutral-airbases', function() {
-        map.getCanvas().style.cursor = '';
-        popup.remove();
-        });
-    });
+        };
+    
+        function buildFilter(arr) {
+        var filter = ['in', 'baseName'];
+        if (arr.length === 0) {
+            return filter;
+        }
+        for(var i = 0; i < arr.length; i += 1) {
+            filter.push(arr[i]);
+        }
+        return filter;
+    }
+    
+    
+        map.on('load', function () {
+            map.addImage('pulsing-dot', pulsingDot, { pixelRatio: 2 });
+            map.addImage('pulsing-dot1', pulsingDot1, { pixelRatio: 2 });
+            map.addImage('pulsing-dot2', pulsingDot2, { pixelRatio: 2 });
+            map.addImage('farpdot',farpdot,{pixelRatio: 2});
+            var url = "link/rsrState.json";
+            $.getJSON(url, dataReady);
+            function dataReady( data ) {
+            var blueBaseFilter = buildFilter(data.baseOwnership.Airbases.blue)
+            var redBaseFilter = buildFilter(data.baseOwnership.Airbases.red)
+            console.log(blueBaseFilter)
+            console.log(redBaseFilter)
+            var url = 'geo/geolocs.json';
+            var url2 = 'geo/farplocs.json';
+            //airbases
+            map.addSource('geolocs', { type: 'geojson', data: url });
+            map.addLayer({'id': 'blue-airbases','type': 'symbol','source': 'geolocs', "filter":blueBaseFilter,"layout":{"icon-image":"pulsing-dot1","icon-allow-overlap":true,"icon-ignore-placement":true,"text-allow-overlap":true,"text-field":["format",["upcase",["get","cap"]],{"font-scale":0.8},"\n",{},["downcase",["get","uncap"]],{"font-scale":0.6}],"text-font":["Open Sans Semibold","Arial Unicode MS Bold"],"text-offset":[0,0.6],"text-anchor":"top"}});
+            map.addLayer({'id': 'red-airbases','type': 'symbol','source': 'geolocs', "filter":redBaseFilter,"layout":{"icon-image":"pulsing-dot","icon-allow-overlap":true,"icon-ignore-placement":true,"text-allow-overlap":true,"text-field":["format",["upcase",["get","cap"]],{"font-scale":0.8},"\n",{},["downcase",["get","uncap"]],{"font-scale":0.6}],"text-font":["Open Sans Semibold","Arial Unicode MS Bold"],"text-offset":[0,0.6],"text-anchor":"top"}});
+            map.addLayer({'id': 'neutral-airbases','type': 'symbol','source': 'geolocs',"filter": ["==","side","n"] ,"layout":{"icon-image":"pulsing-dot2","icon-allow-overlap":true,"icon-ignore-placement":true,"text-allow-overlap":true,"text-field":["format",["upcase",["get","cap"]],{"font-scale":0.8},"\n",{},["downcase",["get","uncap"]],{"font-scale":0.6}],"text-font":["Open Sans Semibold","Arial Unicode MS Bold"],"text-offset":[0,0.6],"text-anchor":"top"}});
+            //farps
+            map.addSource('farplocs', { type: 'geojson', data: url2});
+            map.addLayer({'id': 'farps',type:'symbol','source':'farplocs',"layout":{"icon-image":"farpdot","icon-allow-overlap":true,"icon-ignore-placement":true,"text-allow-overlap":true,"text-field":["format",["upcase",["get","cap"]],{"font-scale":0.8},"\n",{},["downcase",["get","uncap"]],{"font-scale":0.6}],"text-font":["Open Sans Semibold","Arial Unicode MS Bold"],"text-offset":[0,0.6],"text-anchor":"top"}});
+            };
+            
+            map.addSource('geoPoints', {
+            'type': 'geojson',
+            'data': geoPoints
+            });
+            
+            // Add styles to the map
+            map.addLayer({
+            id: 'measure-points',
+            type: 'circle',
+            source: 'geoPoints',
+            paint: {
+            'circle-radius': 5,
+            'circle-color': '#ffffff'
+            },
+            filter: ['in', '$type', 'Point']
+            });
+            map.addLayer({
+            id: 'measure-lines',
+            type: 'line',
+            source: 'geoPoints',
+            layout: {
+            'line-cap': 'round',
+            'line-join': 'round'
+            },
+            paint: {
+            'line-color': '#ffffff',
+            'line-width': 2.5
+            },
+            filter: ['in', '$type', 'LineString']
+            });
+            
+            map.on('click', function(e) {
+            var features = map.queryRenderedFeatures(e.point, {
+            layers: ['measure-points']
+            });
+            
+            // Remove the linestring from the group
+            // So we can redraw it based on the points collection
+            if (geoPoints.features.length > 1) geoPoints.features.pop();
+            
+            // Clear the Distance container to populate it with a new value
+            distanceContainer.innerHTML = '';
+            
+            // If a feature was clicked, remove it from the map
+            if (features.length) {
+            var id = features[0].properties.id;
+            geoPoints.features = geoPoints.features.filter(function(point) {
+            return point.properties.id !== id;
+            });
+            } else {
+            var point = {
+            'type': 'Feature',
+            'geometry': {
+            'type': 'Point',
+            'coordinates': [e.lngLat.lng, e.lngLat.lat]
+            },
+            'properties': {
+            'id': String(new Date().getTime())
+            }
+            };
+            
+            geoPoints.features.push(point);
+            }
+            
+            if (geoPoints.features.length > 1) {
+            linestring.geometry.coordinates = geoPoints.features.map(function(
+            point
+            ) {
+            return point.geometry.coordinates;
+            });
+            
+            geoPoints.features.push(linestring);
+            
+            // Populate the distanceContainer with total distance
+            var value = document.createElement('pre');
+            var lengthMeasured = turf.length(linestring)*0.539957;
+            value.textContent =
+            'Total distance: ' +
+            lengthMeasured.toFixed(2) +
+            'nm';
+            distanceContainer.appendChild(value);
+            }
+            
+            map.getSource('geoPoints').setData(geoPoints);
+            });
 
+        });
+
+        function deg_to_dms (deg) {
+            var d = Math.floor (deg);
+            var minfloat = (deg-d)*60;
+            var m = Math.floor(minfloat);
+            var secfloat = (minfloat-m)*60;
+            var s = Math.round(secfloat);
+            // After rounding, the seconds might become 60. These two
+            // if-tests are not necessary if no rounding is done.
+            if (s==60) {
+                m++;
+                s=0;
+            }
+            if (m==60) {
+                d++;
+                m=0;
+            }
+            return (d + "\xB0" + m + "\'" + s + "\"");
+        }
+
+        function deg_to_ddm (deg) {
+            var d = Math.floor (deg);
+            var minfloat = (deg-d)*60;
+            var m = minfloat;
+            // After rounding, the seconds might become 60. These two
+            // if-tests are not necessary if no rounding is done.
+            if (m==60) {
+                d++;
+                m=0;
+            }
+            return ("" + d + "\xB0" + m);
+        }
+
+
+        map.on('mousemove', function(e) {
+        var features = map.queryRenderedFeatures(e.point, {
+        layers: ['measure-points']
+        });
+        // UI indicator for clicking/hovering a point on the map
+        map.getCanvas().style.cursor = features.length
+        ? 'pointer'
+        : 'crosshair';
+
+
+        console.log();
+
+        document.getElementById('coord-info').innerHTML =
+        JSON.stringify(e.lngLat.lat).substring(0,8) + '\xB0  ' + JSON.stringify(e.lngLat.lng).substring(0,8) + '\xB0<br />' + 
+        deg_to_ddm(e.lngLat.lat).substring(0,9) + '\' ' + deg_to_ddm(e.lngLat.lng).substring(0,9) + '\' <br />' +
+        deg_to_dms(e.lngLat.lat) + ' ' + deg_to_dms(e.lngLat.lng) ;
+        });
     
 
-</script>
-<div id="controlbox">
-    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-        <div class="uk-navbar-left">
-        <ul class="uk-navbar-nav uk-text-bolder uk-text-large ">
-            <li ><a class="uk-text-danger" href="#offcanvas-nav-primary" uk-toggle></span>INFO</a></li>
-            <li><a class="uk-text-danger" href="#offcanvas-flip" uk-toggle>Player List</a></li>
-        </ul>
-        </div>
-    </nav>
-</div>
- 
-<div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
-    <div class="uk-offcanvas-bar">
-                <img src="img/logo.png">
-                <p>
-                    <a href="https://discord.gg/AptRj9p"><span class="uk-margin-small-right" uk-icon="icon: commenting"></span> Discord Link</a>
-                </p>
-                <p> 
-                    Server: redstormrising.ddns.net:10308
-                    SRS: redstormrising.ddns.net:5002
-                </p>
-                <p>
-                    <button class="uk-button uk-button-primary uk-width-1-1" type="button" uk-toggle="target: #modal-close-default-blue">Blue Comms Info</button>
-                    <button class="uk-button uk-button-primary uk-width-1-1" type="button" uk-toggle="target: #modal-close-default-red">Red Comms Info</button>
-                    <button class="uk-button uk-button-primary uk-width-1-1" href="#offcanvas-flip" uk-toggle>Show Player List</button>
-                </p>
-     </div>
-</div>
-<script>
-var $element = $('#my-id');
-$(document).on('beforeshow', $element, function() {
-    document.getElementById('blueteam').innerHTML = '<ul class="uk-list uk-list-striped">'
-    document.getElementById('redteam').innerHTML= '<ul class="uk-list uk-list-striped">'
     
-  $.getJSON('http://walsh.systems:9595/api/v1/players/blue/', function(data) {
-        var i;
-        for (i=0; i < data.length; i++){
-            document.getElementById('blueteam').innerHTML += '<li>' +data[i].Name + '</li>';
-        }
-        document.getElementById('bluecount').innerHTML = data.length;
-    });
-    $.getJSON('http://walsh.systems:9595/api/v1/players/red/', function(data) {
-        var i;
-        for (i=0; i < data.length; i++){
-            document.getElementById('redteam').innerHTML += '<li>' +data[i].Name + '</li>';
-        }
-        document.getElementById('redcount').innerHTML = data.length;
-    });
-    document.getElementById('blueteam').innerHTML += '</ul>'
-    document.getElementById('redteam').innerHTML += '</ul>'
-})
-</script>
+    </script>
 
-<div id="offcanvas-flip" uk-offcanvas="flip: true;">
-    <div class="uk-offcanvas-bar">
-        <button class="uk-offcanvas-close" type="button" uk-close></button>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="redstormrising.net">
+        <img src="/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    </a>
 
-        <ul uk-accordion>
-            <li class="uk-open">
-                <a class="uk-accordion-title" href="#">Blue Team</a>
-                <div class="uk-accordion-content" id="blueteam">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-            </li>
-            <li class="uk-open">
-                <a class="uk-accordion-title" href="#">Red Team</a>
-                <div class="uk-accordion-content" id="redteam">
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor reprehenderit.</p>
-                </div>
-            </li>
-            <li>
-                <a class="uk-accordion-title" href="#">Spectators</a>
-                <div class="uk-accordion-content">
-                    <p>not ready :)</p>
-                </div>
-            </li>
-        </ul>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <button type="button" style="opacity: 0.5;" onclick="$('#playtoast').toast('show')" class="btn btn-dark">Player List</button>
+        </li>
+        <li class="nav-item">
+            <button type="button" style="opacity: 0.5;" onclick="$('#commstoast').toast('show')" class="btn btn-dark">Help</button>
+        </li>
+        <li class="nav-item">
+            <button type="button" style="opacity: 0.5;" data-toggle="modal" data-target="#commsModalBlue" class="btn btn-dark">Blue comms</button>
+        </li>
+        <li class="nav-item">
+            <button type="button" style="opacity: 0.5;" data-toggle="modal" data-target="#commsModalRed" class="btn btn-dark">Red comms</button>
+        </li>
+        <li class="nav-item">
+          <button type="button" style="opacity: 0.5;" onclick="window.open('https://discord.gg/AptRj9p', '_blank');" class="btn btn-dark">Discord</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
+<div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
+    <!-- Position it -->
+    <div style="position: absolute; top: 0; right: 0;">
+
+        <div class="toast" style="width: 300px; opacity: 0.4;" role="alert" aria-live="assertive" aria-atomic="true" id="playtoast" data-autohide="false">
+        <div class="toast-header">
+            <strong class="mr-auto">Players Online: <a id="bluecount">0</a> vs <a id="redcount">0</a></strong>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
         </div>
+        <div class="toast-body nopadding">
+            <table class="table table-dark"><tbody id="team"> </tbody>
+            </table>
+        </div>
+        </div>
+
+    
+        <div  class="toast" style="width: 300px; opacity: 0.4;" role="alert" aria-live="assertive" aria-atomic="true" id="commstoast" data-autohide="false">
+        <div class="toast-header">
+            <strong class="mr-auto">Info</strong>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body">
+            <p>Click on the map to measure distance.<br>
+                <small>(Points can be removed by clicking them)</small>
+            </p>
+        </div>
+        </div>
+
     </div>
 </div>
 
-<!-- This is the modal with the default close button -->
-<div id="modal-close-default-blue" uk-modal>
-    <div class="uk-modal-dialog uk-modal-body">
-        <button class="uk-modal-close-default" type="button" uk-close></button>
-        <h2 class="uk-modal-title">Blue Side Info</h2>
-        <table class="uk-table uk-table-striped uk-text-small uk-text-nowrap">
-            <thead>
-                <tr>
-                    <th>Comms Channels</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>ATC: 250.000<br>
-                        GCI: 125.000</td>
-                </tr>
-                <tr>
-                    <td>EWRs: 124.000<br>
-                        E-2D AWACS Krasnodar [North AO] (Wizard): 252.000<br>
-                        E-2D AWACS Vaziani [South AO] (Darkstar): 253.000<br>
-                        E-2D AWACS Carrier [West AO] (Overlord): 251.000<br>
-                        KC-135 Tanker Carrier [West AO] (Texaco): 254.000, TACAN: 04X<br><br>
-                        
-                        NOTE: SRS can be used on the AWACS frequency for that Area of Operations (AO)</td>
-                </tr>
-                <tr>
-                    <td>BRC: ?<br>
-                        Blue Carrier Group2-1 Stennis (STN): TACAN: 41X, ICLS: 01, 101.00 AM<br>
-                        Blue Carrier Group2-2 Stennis (TOM): TACAN: 42X, ICLS: 02, 102.00 AM<br>
-                        Blue Carrier Group2-3 Tarawa (TAR): TACAN: 43X, ICLS: 03, 103.00 AM<br>
-                    </td>
-                </tr>
-            </tbody>
-        </table>    </div>
-</div>
+<!-- blue comm Modal -->
+<div class="modal fade" id="commsModalBlue" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Communications</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <table class="table table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th>Unit</th>
+                        <th>Freq</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ATC</td>
+                        <td>250.000</td>
+                    </tr>
+                    <tr>
+                        <td>GCI</td>
+                        <td>125.000</td>
+                    </tr>
+                    <tr>
+                        <td>EWR</td>
+                        <td>124.000</td>
+                    <tr>
+                        <td>Krasnodar (Wizard)</td>
+                        <td>252.000</td>
+                    </tr>
+                    <tr>
+                        <td>AWACS Vaziani (Darkstar)</td>
+                        <td>253.000</td>
+                    </tr>
+                    <tr>
+                        <td>AWACS Carrier (Overlord)</td>
+                        <td>251.000</td>
+                    </tr>
+                    <tr>
+                        <td>Tanker Carrier (Texaco)</td>
+                        <td>254.000</td>
+                    </tr>
+                    <tr>
+                        <td>Carrier Stennis (STN)</td><td>TACAN: 41X, ICLS: 01, 101.00 AM</td>
+                    </tr>
+                    <tr>
+                        <td>Carrier Stennis2 (TOM)</td><td>TACAN: 42X, ICLS: 02, 102.00 AM</td>
+                    </tr>
+                    <tr>
+                        <td>Carrier Tarawa (TAR)</td><td>TACAN: 43X, ICLS: 03, 103.00 AM</td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- blue comm Modal -->
+<div class="modal fade" id="commsModalRed" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Communications</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <table class="table table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th>Unit</th>
+                        <th>Freq</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ATC</td>
+                        <td>250.000</td>
+                    </tr>
+                    <tr>
+                        <td>GCI</td>
+                        <td>125.000</td>
+                    </tr>
+                    <tr>
+                        <td>EWR</td>
+                        <td>124.000 (ch0)</td>
+                    <tr>
+                        <td>Krasnodar (Wizard)</td>
+                        <td>122.000</td>
+                    </tr>
+                    <tr>
+                        <td>AWACS Vaziani (Darkstar)</td>
+                        <td>123.000</td>
+                    </tr>
+                    <tr>
+                        <td>AWACS Carrier (Overlord)</td>
+                        <td>121.000</td>
+                    </tr>
+                    <tr>
+                        <td>Tanker Carrier (Shell)</td>
+                        <td>120.000 TACAN: 08X</td>
+                    </tr>
+                    <tr>
+                        <td>Carrier Kuznetsov</td><td> 102.00 AM</td>
+                    </tr>
+                    <tr>
+                        <td>Carrier Stennis (TOM)</td><td>TACAN: 35X, ICLS: 05, Freq: 105.00 AM</td>
+                    </tr>
+                    <tr>
+                        <td>Carrier Tarawa (TRW)</td><td>TACAN: 36X, ICLS: 06, Freq: 106.00 AM</td>
+                    </tr>
+                    <tr>
+                        <td>Carrier Tarawa (TKR)</td><td>TACAN: 37X, ICLS: 07, Freq: 107.00 AM</td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<div id="modal-close-default-red" uk-modal>
-    <div class="uk-modal-dialog uk-modal-body">
-        <button class="uk-modal-close-default" type="button" uk-close></button>
-        <h2 class="uk-modal-title">Red Side Info</h2>
-        <table class="uk-table uk-table-striped uk-text-small uk-text-nowrap">
-            <thead>
-                <tr>
-                    <th>Comms Channels</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>ATC: 250.000<br>
-                        GCI: 125.000</td>
-                </tr>
-                <tr>
-                    <td>EWRs: 124.000 (ch0)<br>
-                        E-3A AWACS Krasnodar [North-West AO] (Wizard): 122.000<br>
-                        E-3A AWACS Vaziani [South-East AO] (Darkstar): 123.000<br>
-                        E-3A AWACS Carrier [South AO] (Overlord): 121.000<br>
-                        KC-135 Tanker Carrier [South AO] (Shell): 120.000, TACAN: 08X<br>
-                        
-                        NOTE: SRS can be used on the AWACS frequency for that Area of Operations (AO)</td>
-                </tr>
-                <tr>
-                    <td>BRC: ?<br>
-                        Red Carrier Group1-2 Kuznetsov: Freq: 102.00 AM<br>
-                        Red Carrier Group1-5 Stennis (STR): TACAN: 35X, ICLS: 05, Freq: 105.00 AM<br>
-                        Red Carrier Group1-6 Tarawa (TRW): TACAN: 36X, ICLS: 06, Freq: 106.00 AM<br>
-                        Red Carrier Group1-7 Tarawa (TKR): TACAN: 37X, ICLS: 07, Freq: 107.00 AM<br>
-                    </td>
-                </tr>
-            </tbody>
-        </table>    </div>
-</div>         
-
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+            
+        document.getElementById('team').innerHTML = ''
+        document.getElementById('team').innerHTML= ''
     
-</div>
+        $.getJSON('http://walsh.systems:9595/api/v1/players/blue/', function(data) {
+                var i;
+                for (i=0; i < data.length; i++){
+                    document.getElementById('team').innerHTML += '<tr  style="background-color: #0f0f5f;" ><td>' +data[i].Name + '</tr></td>';
+                }
+                document.getElementById('bluecount').innerHTML = data.length;
+            });
+        $.getJSON('http://walsh.systems:9595/api/v1/players/red/', function(data) {
+            var i;
+            for (i=0; i < data.length; i++){
+                document.getElementById('team').innerHTML += '<tr  style="background-color: #5f0f0f;"><td>' +data[i].Name + '</tr></td>';
+            }
+                document.getElementById('redcount').innerHTML = data.length;
+        });
+
+        $('#playtoast').on('show.bs.toast', function () {
+        // do something...
+
+        });
+        $(document).ready(function(){$("#playtoast").toast('show');});  
+        $(document).ready(function(){$("#commstoast").toast('show');});   
+    </script>
 </body>
-<script>
-    
-    window.addEventListener("load", function(){
-        UIkit.offcanvas('#offcanvas-nav-primary').toggle();
-    });
-
-</script>
+  
 </html>
