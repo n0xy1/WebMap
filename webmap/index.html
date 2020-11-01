@@ -77,8 +77,8 @@
         var map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/mapbox/dark-v10',
-            center: [40.392174,43.503044],
-            zoom: 6.8,
+            center: [34.6573,35.69053],
+            zoom: 6.5,
     
         });
     
@@ -199,7 +199,7 @@
                 // draw inner circle
                 context.beginPath();
                 context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
-                context.fillStyle = 'rgba(100, 255, 100, 1)';
+                context.fillStyle = 'rgb(100,255,100)';
                 context.strokeStyle = 'white';
                 context.lineWidth = 2 + 4 * (1 - t);
                 context.fill();
@@ -230,7 +230,7 @@
                 var t = (performance.now() % duration) / duration;
                 var radius = size / 4 * 0.3;
                 var outerRadius = size / 4 * 0.7 * t + radius;
-                var context = this.context;
+                var context = this.contex
                 // draw inner circle
                 context.beginPath();
                 context.rect(this.width / 2, this.height / 2, 12, 12);
@@ -282,20 +282,18 @@
             map.addImage('pulsing-dot1', pulsingDot1, { pixelRatio: 2 });
             map.addImage('pulsing-dot2', pulsingDot2, { pixelRatio: 2 });
             map.addImage('farpdot',farpdot,{pixelRatio: 2});
-            var url = "link/rsrState.json";
+            var url = "http://127.0.0.1:9595/api/bases";
             $.getJSON(url, dataReady);
             function dataReady( data ) {
-            var blueBaseFilter = buildFilter(data.baseOwnership.Airbases.blue)
-            var redBaseFilter = buildFilter(data.baseOwnership.Airbases.red)
-            console.log(blueBaseFilter)
-            console.log(redBaseFilter)
+            var blueBaseFilter = buildFilter(data.blueOwnership);
+            var redBaseFilter = buildFilter(data.redOwnership);
+			var neutBaseFilter = buildFilter(data.noOwnership);
             var url = 'geo/geolocs.json';
-            var url2 = 'geo/farplocs.json';
             //airbases
             map.addSource('geolocs', { type: 'geojson', data: url });
             map.addLayer({'id': 'blue-airbases','type': 'symbol','source': 'geolocs', "filter":blueBaseFilter,"layout":{"icon-image":"pulsing-dot1","icon-allow-overlap":true,"icon-ignore-placement":true,"text-allow-overlap":true,"text-field":["format",["upcase",["get","cap"]],{"font-scale":0.8},"\n",{},["downcase",["get","uncap"]],{"font-scale":0.6}],"text-font":["Open Sans Semibold","Arial Unicode MS Bold"],"text-offset":[0,0.6],"text-anchor":"top"}});
             map.addLayer({'id': 'red-airbases','type': 'symbol','source': 'geolocs', "filter":redBaseFilter,"layout":{"icon-image":"pulsing-dot","icon-allow-overlap":true,"icon-ignore-placement":true,"text-allow-overlap":true,"text-field":["format",["upcase",["get","cap"]],{"font-scale":0.8},"\n",{},["downcase",["get","uncap"]],{"font-scale":0.6}],"text-font":["Open Sans Semibold","Arial Unicode MS Bold"],"text-offset":[0,0.6],"text-anchor":"top"}});
-            map.addLayer({'id': 'neutral-airbases','type': 'symbol','source': 'geolocs',"filter": ["==","side","n"] ,"layout":{"icon-image":"pulsing-dot2","icon-allow-overlap":true,"icon-ignore-placement":true,"text-allow-overlap":true,"text-field":["format",["upcase",["get","cap"]],{"font-scale":0.8},"\n",{},["downcase",["get","uncap"]],{"font-scale":0.6}],"text-font":["Open Sans Semibold","Arial Unicode MS Bold"],"text-offset":[0,0.6],"text-anchor":"top"}});
+            map.addLayer({'id': 'neutral-airbases','type': 'symbol','source': 'geolocs',"filter":neutBaseFilter ,"layout":{"icon-image":"pulsing-dot2","icon-allow-overlap":true,"icon-ignore-placement":true,"text-allow-overlap":true,"text-field":["format",["upcase",["get","cap"]],{"font-scale":0.8},"\n",{},["downcase",["get","uncap"]],{"font-scale":0.6}],"text-font":["Open Sans Semibold","Arial Unicode MS Bold"],"text-offset":[0,0.6],"text-anchor":"top"}});
             //farps
             map.addSource('farplocs', { type: 'geojson', data: url2});
             map.addLayer({'id': 'farps',type:'symbol','source':'farplocs',"layout":{"icon-image":"farpdot","icon-allow-overlap":true,"icon-ignore-placement":true,"text-allow-overlap":true,"text-field":["format",["upcase",["get","cap"]],{"font-scale":0.8},"\n",{},["downcase",["get","uncap"]],{"font-scale":0.6}],"text-font":["Open Sans Semibold","Arial Unicode MS Bold"],"text-offset":[0,0.6],"text-anchor":"top"}});
@@ -647,17 +645,17 @@
         document.getElementById('team').innerHTML = ''
         document.getElementById('team').innerHTML= ''
     
-        $.getJSON('http://walsh.systems:9595/api/v1/players/blue/', function(data) {
+        $.getJSON('http://127.0.0.1:9595/api/players/blue', function(data) {
                 var i;
                 for (i=0; i < data.length; i++){
-                    document.getElementById('team').innerHTML += '<tr  style="background-color: #0f0f5f;" ><td>' +data[i].Name + '</tr></td>';
+                    document.getElementById('team').innerHTML += '<tr  style="background-color: #0f0f5f;" ><td>' +data[i] + '</tr></td>';
                 }
                 document.getElementById('bluecount').innerHTML = data.length;
             });
-        $.getJSON('http://walsh.systems:9595/api/v1/players/red/', function(data) {
+        $.getJSON('http://127.0.0.1:9595/api/players/red', function(data) {
             var i;
             for (i=0; i < data.length; i++){
-                document.getElementById('team').innerHTML += '<tr  style="background-color: #5f0f0f;"><td>' +data[i].Name + '</tr></td>';
+                document.getElementById('team').innerHTML += '<tr  style="background-color: #5f0f0f;"><td>' +data[i] + '</tr></td>';
             }
                 document.getElementById('redcount').innerHTML = data.length;
         });
