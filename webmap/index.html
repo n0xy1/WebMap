@@ -10,18 +10,19 @@
     <!-- Mapbox -->
     <link rel="icon" href="//img1.wsimg.com/isteam/ip/d837f339-0c70-45ad-8c5c-4614e8fe41cf/favicon/a71a660b-037f-45e6-b5bc-8bbbb4f12562.png/:/rs=w:64,h:64,m" sizes="64x64">
     <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />   
-    <script src="js/map.js"></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
     <style>        
         body { margin:0; padding:0; }
         #map canvas {cursor: crosshair;}
         #map { position: absolute; top: 0; bottom: 0; width: 100%; }
         .mapboxgl-popup {
         max-width: 400px;
-        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            opacity: 0.89;
+        font: 12px/14px 'Helvetica Neue', Arial, Helvetica, sans-serif;
         }
         .mapboxgl-popup-content {
-        color: #2f2f2f;
+            color: #2f2f2f;
+            opacity: 0.89;
         }
         
         .nopadding {
@@ -331,6 +332,8 @@
             });
             
             map.on('click', function(e) {
+                if (event.ctrlKey) {
+
             var features = map.queryRenderedFeatures(e.point, {
             layers: ['measure-points']
             });
@@ -383,7 +386,7 @@
             }
             
             map.getSource('geoPoints').setData(geoPoints);
-            });
+            }});
 
         });
 
@@ -437,8 +440,44 @@
         deg_to_ddm(e.lngLat.lat).substring(0,9) + '\' ' + deg_to_ddm(e.lngLat.lng).substring(0,9) + '\' <br />' +
         deg_to_dms(e.lngLat.lat) + ' ' + deg_to_dms(e.lngLat.lng) ;
         });
-    
 
+
+
+        map.on('click', 'blue-airbases', function(e){
+
+            if (event.ctrlKey) {}else{
+                var coordinates = e.features[0].geometry.coordinates.slice();
+                var description = e.features[0].properties.description;
+                while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                }
+                $.getJSON("http://127.0.0.1:9595/api/bases/detail/"+e.features[0].properties.baseName, function(data) {
+                    // JSON result in `data` variable
+                console.log(data);
+                    new mapboxgl.Popup()
+                        .setLngLat(coordinates)
+                        .setHTML("<h3>"+data.name+"</h3><p>Status: "+data.status+"<br>Slots: "+data.slots+"</p>")
+                        .addTo(map);
+                });
+        }});
+
+        map.on('click', 'red-airbases', function(e){
+
+            if (event.ctrlKey) {}else{
+                var coordinates = e.features[0].geometry.coordinates.slice();
+                var description = e.features[0].properties.description;
+                while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                }
+                $.getJSON("http://127.0.0.1:9595/api/bases/detail/"+e.features[0].properties.baseName, function(data) {
+                    // JSON result in `data` variable
+                    console.log(data);
+                    new mapboxgl.Popup({ closeOnClick: true})
+                        .setLngLat(coordinates)
+                        .setHTML("<h3>"+data.name+"</h3><p>Status: "+data.status+"<br>Slots: "+data.slots+"</p>")
+                        .addTo(map);
+                });
+            }});
     
     </script>
 
@@ -494,7 +533,7 @@
             </button>
         </div>
         <div class="toast-body">
-            <p>Click on the map to measure distance.<br>
+            <p>CTRL+Click on the map to measure distance.<br>
                 <small>(Points can be removed by clicking them)</small>
             </p>
         </div>
@@ -514,52 +553,21 @@
           </button>
         </div>
         <div class="modal-body">
-            <table class="table table-striped table-sm">
-                <thead>
-                    <tr>
-                        <th>Unit</th>
-                        <th>Freq</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>ATC</td>
-                        <td>250.000</td>
-                    </tr>
-                    <tr>
-                        <td>GCI</td>
-                        <td>125.000</td>
-                    </tr>
-                    <tr>
-                        <td>EWR</td>
-                        <td>124.000</td>
-                    <tr>
-                        <td>Krasnodar (Wizard)</td>
-                        <td>252.000</td>
-                    </tr>
-                    <tr>
-                        <td>AWACS Vaziani (Darkstar)</td>
-                        <td>253.000</td>
-                    </tr>
-                    <tr>
-                        <td>AWACS Carrier (Overlord)</td>
-                        <td>251.000</td>
-                    </tr>
-                    <tr>
-                        <td>Tanker Carrier (Texaco)</td>
-                        <td>254.000</td>
-                    </tr>
-                    <tr>
-                        <td>Carrier Stennis (STN)</td><td>TACAN: 41X, ICLS: 01, 101.00 AM</td>
-                    </tr>
-                    <tr>
-                        <td>Carrier Stennis2 (TOM)</td><td>TACAN: 42X, ICLS: 02, 102.00 AM</td>
-                    </tr>
-                    <tr>
-                        <td>Carrier Tarawa (TAR)</td><td>TACAN: 43X, ICLS: 03, 103.00 AM</td>
-                    </tr>
-                </tbody>
-            </table> 
+            COMM CHANNELS:<br>
+            ATC: 254.000<br>
+            GCI: 251.000<br>
+            ----------------------------------------------------------------------<br>
+            EWRs: 124.000<br>
+            E-3A AWACS (Magic 1-1): 251.000<br>
+            <br>
+            KC-135MPRS Tanker (Texaco 1-1): 141.000, TACAN: 41Y<br>
+            KC-135 Tanker  (Texaco 2-1): 142.000, TACAN: 42X<br>
+            <br>
+            AFAC Pontiac 1-1: 133.000<br>
+            <br>
+            Carrier: 127.500, TACAN 73X, ICLS Channel 1<br>
+            <br>
+            NOTE: We use the same SRS frequency for Human GCI as the AWACs.<br>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -578,55 +586,19 @@
           </button>
         </div>
         <div class="modal-body">
-            <table class="table table-striped table-sm">
-                <thead>
-                    <tr>
-                        <th>Unit</th>
-                        <th>Freq</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>ATC</td>
-                        <td>250.000</td>
-                    </tr>
-                    <tr>
-                        <td>GCI</td>
-                        <td>125.000</td>
-                    </tr>
-                    <tr>
-                        <td>EWR</td>
-                        <td>124.000 (ch0)</td>
-                    <tr>
-                        <td>Krasnodar (Wizard)</td>
-                        <td>122.000</td>
-                    </tr>
-                    <tr>
-                        <td>AWACS Vaziani (Darkstar)</td>
-                        <td>123.000</td>
-                    </tr>
-                    <tr>
-                        <td>AWACS Carrier (Overlord)</td>
-                        <td>121.000</td>
-                    </tr>
-                    <tr>
-                        <td>Tanker Carrier (Shell)</td>
-                        <td>120.000 TACAN: 08X</td>
-                    </tr>
-                    <tr>
-                        <td>Carrier Kuznetsov</td><td> 102.00 AM</td>
-                    </tr>
-                    <tr>
-                        <td>Carrier Stennis (TOM)</td><td>TACAN: 35X, ICLS: 05, Freq: 105.00 AM</td>
-                    </tr>
-                    <tr>
-                        <td>Carrier Tarawa (TRW)</td><td>TACAN: 36X, ICLS: 06, Freq: 106.00 AM</td>
-                    </tr>
-                    <tr>
-                        <td>Carrier Tarawa (TKR)</td><td>TACAN: 37X, ICLS: 07, Freq: 107.00 AM</td>
-                    </tr>
-                </tbody>
-            </table> 
+            COMM CHANNELS:<br>
+            ATC: 251.000<br>
+            GCI: 121.000<br>
+            ----------------------------------------------------------------------<br>
+            EWRs: 124.000<br>
+            E-3 AWACS (Magic 1-1): 121.000<br>
+            <br>
+            KC-135MPRS Tanker (Texaco 1-1): 141.000, TACAN: 41Y<br>
+            KC-135 Tanker (Texaco 2-1): 142.000, TACAN: 42Y<br>
+            <br>
+            AFAC Pontiac 1-1: 133.000<br>
+            <br>
+            NOTE: We use the same SRS frequency for Human GCI as the AWACs.<br>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
