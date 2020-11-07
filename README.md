@@ -2,9 +2,11 @@
 
 ## SETUP
 
-Symlink the rsrState.json file to ./webmap/link/rsrState.json
+get the bot running.
 
-for example: *mklink "webmap/link/rsrState.json" "C:\Users\Administrator\Saved Games\DCS.openbeta_server\Scripts\RSR\rsrState.json"*
+
+Inside index.html change all occurances of 127.0.0.1 with east.redstormrising.net
+
 
 ## RUNNING
 
