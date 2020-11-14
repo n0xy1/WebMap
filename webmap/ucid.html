@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Mapbox -->
+    <link rel="icon" href="//img1.wsimg.com/isteam/ip/d837f339-0c70-45ad-8c5c-4614e8fe41cf/favicon/a71a660b-037f-45e6-b5bc-8bbbb4f12562.png/:/rs=w:64,h:64,m" sizes="64x64">
+    <style>        
+        body { background-color:#2f2f2f;margin:0; padding:0; }
+        #map canvas {cursor: crosshair;}
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+        .mapboxgl-popup {
+        max-width: 400px;
+            opacity: 0.89;
+        font: 12px/14px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        }
+        .mapboxgl-popup-content {
+            color: #2f2f2f;
+            opacity: 0.89;
+        }
+        
+        .nopadding {
+        padding: 0 !important;
+        margin: 0 !important;
+        }
+        .distance-container {
+        position: absolute;
+        bottom: 100px;
+        left: 10px;
+        z-index: 1;
+        }
+        .distance-container > * {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-size: 11px;
+        line-height: 18px;
+        display: block;
+        margin: 0;
+        padding: 5px 10px;
+        border-radius: 3px;
+        }
+        #coord-info {
+        display: block;
+        position: absolute;
+        margin: 0px auto;
+        bottom: 30px;
+        left: 10px;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        font-size: 12px;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+        }
+    </style>
+    <title>Red Storm Rising :: UCID</title>
+  </head>
+  <body>
+
+    
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="https://redstormrising.net">
+        <img src="/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <button type="button" style="opacity: 0.5;" onclick="$('#playtoast').toast('show')" class="btn btn-dark">Player List</button>
+        </li>
+        <li class="nav-item">
+            <button type="button" style="opacity: 0.5;" onclick="$('#commstoast').toast('show')" class="btn btn-dark">Help</button>
+        </li>
+        <li class="nav-item">
+            <button type="button" style="opacity: 0.5;" data-toggle="modal" data-target="#commsModalBlue" class="btn btn-dark">Blue comms</button>
+        </li>
+        <li class="nav-item">
+            <button type="button" style="opacity: 0.5;" data-toggle="modal" data-target="#commsModalRed" class="btn btn-dark">Red comms</button>
+        </li>
+        <li class="nav-item">
+          <button type="button" style="opacity: 0.5;" onclick="window.open('https://discord.gg/AptRj9p', '_blank');" class="btn btn-dark">Discord</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+<!-- blue comm Modal -->
+<div class="modal fade" id="commsModalBlue" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Communications</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            COMM CHANNELS:<br>
+            ATC: 254.000<br>
+            GCI: 251.000<br>
+            ----------------------------------------------------------------------<br>
+            EWRs: 124.000<br>
+            E-3A AWACS (Magic 1-1): 251.000<br>
+            <br>
+            KC-135MPRS Tanker (Texaco 1-1): 141.000, TACAN: 41Y<br>
+            KC-135 Tanker  (Texaco 2-1): 142.000, TACAN: 42X<br>
+            <br>
+            AFAC Pontiac 1-1: 133.000<br>
+            <br>
+            Carrier: 127.500, TACAN 73X, ICLS Channel 1<br>
+            <br>
+            NOTE: We use the same SRS frequency for Human GCI as the AWACs.<br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- blue comm Modal -->
+<div class="modal fade" id="commsModalRed" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Communications</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            COMM CHANNELS:<br>
+            ATC: 251.000<br>
+            GCI: 121.000<br>
+            ----------------------------------------------------------------------<br>
+            EWRs: 124.000<br>
+            E-3 AWACS (Magic 1-1): 121.000<br>
+            <br>
+            KC-135MPRS Tanker (Texaco 1-1): 141.000, TACAN: 41Y<br>
+            KC-135 Tanker (Texaco 2-1): 142.000, TACAN: 42Y<br>
+            <br>
+            AFAC Pontiac 1-1: 133.000<br>
+            <br>
+            NOTE: We use the same SRS frequency for Human GCI as the AWACs.<br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <table class="table table-dark">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">UCID</th>
+        <th scope="col">DCS Name</th>
+      </tr>
+    </thead>
+    <tbody id="datarows">
+    </tbody>
+  </table>
+  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+                
+
+        $('#playtoast').on('show.bs.toast', function () {
+        // do something...
+
+        });
+
+        $.getJSON('http://east.redstormrising.net:9595/api/ucid', function(data) {
+            var i;
+            for (i=0; i < data.length; i++){
+                document.getElementById('datarows').innerHTML += '<tr><th scope="row">'+ data[i].Dcsid.String + '</th><td>' + data[i].Dcsname + '</td></tr>';
+            }
+        });
+
+        $(document).ready(function(){$("#playtoast").toast('show');});  
+        $(document).ready(function(){$("#commstoast").toast('show');});   
+    </script>
+</body>
+  
+</html>
